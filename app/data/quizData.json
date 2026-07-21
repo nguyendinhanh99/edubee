@@ -1,0 +1,424 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "Em hãy tìm xem đâu là chú khỉ tinh nghịch",
+      "score": 10,
+      "options": [
+        { "id": "opt1", "name": "Con khỉ", "icon": "🐒", "isCorrect": true },
+        { "id": "opt2", "name": "Con thỏ", "icon": "🐇", "isCorrect": false },
+        { "id": "opt3", "name": "Con heo", "icon": "🐖", "isCorrect": false },
+        { "id": "opt4", "name": "Con gà", "icon": "🐔", "isCorrect": false }
+      ],
+      "correctFeedback": {
+        "videoUrl": "/videos/monkey.mp4",
+        "soundUrl": "/sounds/monkey.mp3",
+        "knowledge": "Kiến thức: Khỉ là loài thú thông minh, có màu lông nâu hoặc vàng, rất thích ăn chuối và leo trèo tài giỏi."
+      },
+      "incorrectFeedback": {
+        "videoUrl": "/videos/monkey_wrong.mp4",
+        "soundUrl": "/sounds/wrong.mp3",
+        "knowledge": "Kiến thức: Ôi chưa đúng rồi, chú khỉ tinh nghịch có đôi tai to, rất thích ăn chuối và leo trèo linh hoạt cơ mà!"
+      }
+    },
+    {
+      "id": 2,
+      "question": "Đâu là chú voi to lớn với chiếc vòi dài?",
+      "score": 10,
+      "options": [
+        { "id": "opt1", "name": "Con mèo", "icon": "🐱", "isCorrect": false },
+        { "id": "opt2", "name": "Con voi", "icon": "🐘", "isCorrect": true },
+        { "id": "opt3", "name": "Con chó", "icon": "🐶", "isCorrect": false },
+        { "id": "opt4", "name": "Con ngựa", "icon": "🐴", "isCorrect": false }
+      ],
+      "correctFeedback": {
+        "videoUrl": "/videos/voi.mp4",
+        "soundUrl": "/sounds/elephant.mp3",
+        "knowledge": "Kiến thức: Voi là động vật trên cạn lớn nhất, da màu xám, ăn cỏ và lá cây bằng chiếc vòi dài."
+      },
+      "incorrectFeedback": {
+        "videoUrl": "/videos/elephant_wrong.mp4",
+        "soundUrl": "/sounds/wrong.mp3",
+        "knowledge": "Kiến thức: Chưa chính xác em nhé, chú voi có thân hình khổng lồ, màu xám và chiếc vòi dài."
+      }
+    },
+    {
+      "id": 3,
+      "question": "Đâu là chú cá heo thông minh ở đại dương?",
+      "score": 10,
+      "options": [
+        { "id": "opt1", "name": "Con cá mập", "icon": "🦈", "isCorrect": false },
+        { "id": "opt2", "name": "Con cua", "icon": "🦀", "isCorrect": false },
+        { "id": "opt3", "name": "Con cá heo", "icon": "🐬", "isCorrect": true },
+        { "id": "opt4", "name": "Con mực", "icon": "🦑", "isCorrect": false }
+      ],
+      "correctFeedback": {
+        "videoUrl": "/videos/dolphin.mp4",
+        "soundUrl": "/sounds/dolphin.mp3",
+        "knowledge": "Kiến thức: Cá heo có màu xám trắng, sống dưới biển, ăn cá nhỏ và cực kỳ thân thiện."
+      },
+      "incorrectFeedback": {
+        "videoUrl": "/videos/dolphin_wrong.mp4",
+        "soundUrl": "/sounds/wrong.mp3",
+        "knowledge": "Kiến thức: Cố gắng lên em ơi, cá heo là loài bơi lội rất uyển chuyển và thông minh dưới đại dương."
+      }
+    },
+    {
+      "id": 4,
+      "question": "Đâu là chúa sơn lâm - chú hổ dũng mãnh?",
+      "score": 10,
+      "options": [
+        { "id": "opt1", "name": "Con hổ", "icon": "🐅", "isCorrect": true },
+        { "id": "opt2", "name": "Con cừu", "icon": "🐑", "isCorrect": false },
+        { "id": "opt3", "name": "Con bò", "icon": "🐄", "isCorrect": false },
+        { "id": "opt4", "name": "Con dê", "icon": "🐐", "isCorrect": false }
+      ],
+      "correctFeedback": {
+        "videoUrl": "/videos/tiger.mp4",
+        "soundUrl": "/sounds/tiger.mp3",
+        "knowledge": "Kiến thức: Hổ có bộ lông màu cam sọc đen oai vệ, là loài thú ăn thịt chạy rất nhanh."
+      },
+      "incorrectFeedback": {
+        "videoUrl": "/videos/tiger_wrong.mp4",
+        "soundUrl": "/sounds/wrong.mp3",
+        "knowledge": "Kiến thức: Chưa đúng rồi em, chú hổ có bộ lông cam rực rỡ kèm các sọc vằn đen rất oai vệ."
+      }
+    },
+    {
+      "id": 5,
+      "question": "Em hãy tìm chú sư tử có chiếc bờm oai vệ",
+      "score": 10,
+      "options": [
+        { "id": "opt1", "name": "Con gấu trúc", "icon": "🐼", "isCorrect": false },
+        { "id": "opt2", "name": "Con sư tử", "icon": "🦁", "isCorrect": true },
+        { "id": "opt3", "name": "Con cáo", "icon": "🦊", "isCorrect": false },
+        { "id": "opt4", "name": "Con gấu", "icon": "🐻", "isCorrect": false }
+      ],
+      "correctFeedback": {
+        "videoUrl": "/videos/lion.mp4",
+        "soundUrl": "/sounds/lion.mp3",
+        "knowledge": "Kiến thức: Sư tử có lông màu vàng cát, ăn thịt, con đực có chiếc bờm dày uy nghi."
+      },
+      "incorrectFeedback": {
+        "videoUrl": "/videos/lion_wrong.mp4",
+        "soundUrl": "/sounds/wrong.mp3",
+        "knowledge": "Kiến thức: Sai mất rồi, chú sư tử sống ở đồng cỏ và có chiếc bờm màu vàng đậm quanh cổ cơ mà!"
+      }
+    },
+    {
+      "id": 6,
+      "question": "Đâu là chú gấu trúc ăn lá trúc đáng yêu?",
+      "score": 10,
+      "options": [
+        { "id": "opt1", "name": "Con gấu trúc", "icon": "🐼", "isCorrect": true },
+        { "id": "opt2", "name": "Con hổ", "icon": "🐅", "isCorrect": false },
+        { "id": "opt3", "name": "Con ngựa", "icon": "🐴", "isCorrect": false },
+        { "id": "opt4", "name": "Con trâu", "icon": "🐃", "isCorrect": false }
+      ],
+      "correctFeedback": {
+        "videoUrl": "/videos/panda.mp4",
+        "soundUrl": "/sounds/panda.mp3",
+        "knowledge": "Kiến thức: Gấu trúc có hai màu đen trắng, đeo quầng thâm mắt ngộ nghĩnh và rất thích ăn măng trúc."
+      },
+      "incorrectFeedback": {
+        "videoUrl": "/videos/panda_wrong.mp4",
+        "soundUrl": "/sounds/wrong.mp3",
+        "knowledge": "Kiến thức: Chưa chính xác em ơi, gấu trúc có bộ lông trắng đen đặc trưng và rất thích ăn măng trúc."
+      }
+    },
+    {
+      "id": 7,
+      "question": "Em hãy chọn chú hươu cao cổ có chiếc cổ rất dài",
+      "score": 10,
+      "options": [
+        { "id": "opt1", "name": "Con ngựa vằn", "icon": "🦓", "isCorrect": false },
+        { "id": "opt2", "name": "Con voi", "icon": "🐘", "isCorrect": false },
+        { "id": "opt3", "name": "Con hươu cao cổ", "icon": "🦒", "isCorrect": true },
+        { "id": "opt4", "name": "Con khỉ", "icon": "🐒", "isCorrect": false }
+      ],
+      "correctFeedback": {
+        "videoUrl": "/videos/giraffe.mp4",
+        "soundUrl": "/sounds/giraffe.mp3",
+        "knowledge": "Kiến thức: Hươu có lông vàng đốm nâu, cổ rất dài để với ăn lá cây ở trên cao."
+      },
+      "incorrectFeedback": {
+        "videoUrl": "/videos/giraffe_wrong.mp4",
+        "soundUrl": "/sounds/wrong.mp3",
+        "knowledge": "Kiến thức: Không phải rồi, chú hươu cao cổ có chiếc cổ dài và bộ lông đốm vàng nâu đặc biệt."
+      }
+    },
+    {
+      "id": 8,
+      "question": "Đâu là chú ngựa vằn có những sọc trắng đen?",
+      "score": 10,
+      "options": [
+        { "id": "opt1", "name": "Con ngựa vằn", "icon": "🦓", "isCorrect": true },
+        { "id": "opt2", "name": "Con lừa", "icon": "🫏", "isCorrect": false },
+        { "id": "opt3", "name": "Con bò sữa", "icon": "🐄", "isCorrect": false },
+        { "id": "opt4", "name": "Con cừu", "icon": "🐑", "isCorrect": false }
+      ],
+      "correctFeedback": {
+        "videoUrl": "/videos/zebra.mp4",
+        "soundUrl": "/sounds/zebra.mp3",
+        "knowledge": "Kiến thức: Ngựa vằn sống ở châu Phi, có các sọc đen trắng đan xen giúp ngụy trang và ăn cỏ."
+      },
+      "incorrectFeedback": {
+        "videoUrl": "/videos/zebra_wrong.mp4",
+        "soundUrl": "/sounds/wrong.mp3",
+        "knowledge": "Kiến thức: Tiếc quá, đó chưa phải ngựa vằn. Ngựa vằn nổi tiếng với các đường sọc đen trắng rõ nét trên cơ thể."
+      }
+    },
+    {
+      "id": 9,
+      "question": "Đâu là chú thỏ trắng nhanh nhẹn thích ăn cà rốt?",
+      "score": 10,
+      "options": [
+        { "id": "opt1", "name": "Con chuột", "icon": "🐭", "isCorrect": false },
+        { "id": "opt2", "name": "Con sóc", "icon": "🐿️", "isCorrect": false },
+        { "id": "opt3", "name": "Con thỏ", "icon": "🐇", "isCorrect": true },
+        { "id": "opt4", "name": "Con nhím", "icon": "🦔", "isCorrect": false }
+      ],
+      "correctFeedback": {
+        "videoUrl": "/videos/rabbit.mp4",
+        "soundUrl": "/sounds/rabbit.mp3",
+        "knowledge": "Kiến thức: Thỏ có tai dài, lông trắng hoặc xám, di chuyển bằng cách nhảy và rất thích ăn cà rốt."
+      },
+      "incorrectFeedback": {
+        "videoUrl": "/videos/rabbit_wrong.mp4",
+        "soundUrl": "/sounds/wrong.mp3",
+        "knowledge": "Kiến thức: Chưa đúng rồi em ơi, chú thỏ có đôi tai dài đáng yêu và rất thích ăn cà rốt."
+      }
+    },
+    {
+      "id": 10,
+      "question": "Em hãy tìm chú gấu túi (Koala) ở trên cây",
+      "score": 10,
+      "options": [
+        { "id": "opt1", "name": "Con gấu túi", "icon": "🐨", "isCorrect": true },
+        { "id": "opt2", "name": "Con gấu", "icon": "🐻", "isCorrect": false },
+        { "id": "opt3", "name": "Con mèo", "icon": "🐱", "isCorrect": false },
+        { "id": "opt4", "name": "Con cún", "icon": "🐶", "isCorrect": false }
+      ],
+      "correctFeedback": {
+        "videoUrl": "/videos/koala.mp4",
+        "soundUrl": "/sounds/koala.mp3",
+        "knowledge": "Kiến thức: Gấu túi lông xám tro, sống ở Úc và thức ăn duy nhất là lá cây bạch đàn."
+      },
+      "incorrectFeedback": {
+        "videoUrl": "/videos/koala_wrong.mp4",
+        "soundUrl": "/sounds/wrong.mp3",
+        "knowledge": "Kiến thức: Sai mất rồi, chú gấu túi có lông xám, mũi tròn và sống bám trên cây bạch đàn."
+      }
+    },
+    {
+      "id": 11,
+      "question": "Đâu là chú cáo tinh khôn với chiếc đuôi dài?",
+      "score": 10,
+      "options": [
+        { "id": "opt1", "name": "Con chó sói", "icon": "🐺", "isCorrect": false },
+        { "id": "opt2", "name": "Con cáo", "icon": "🦊", "isCorrect": true },
+        { "id": "opt3", "name": "Con mèo", "icon": "🐱", "isCorrect": false },
+        { "id": "opt4", "name": "Con hổ", "icon": "🐅", "isCorrect": false }
+      ],
+      "correctFeedback": {
+        "videoUrl": "/videos/fox.mp4",
+        "soundUrl": "/sounds/fox.mp3",
+        "knowledge": "Kiến thức: Cáo có lông màu cam đỏ, mõm nhọn, đuôi xù dài và rất lanh lợi."
+      },
+      "incorrectFeedback": {
+        "videoUrl": "/videos/fox_wrong.mp4",
+        "soundUrl": "/sounds/wrong.mp3",
+        "knowledge": "Kiến thức: Chưa chính xác em nhé, chú cáo có bộ lông màu cam đỏ và cái đuôi xù dài."
+      }
+    },
+    {
+      "id": 12,
+      "question": "Đâu là chú gấu nâu to lớn ở trong rừng?",
+      "score": 10,
+      "options": [
+        { "id": "opt1", "name": "Con gấu nâu", "icon": "🐻", "isCorrect": true },
+        { "id": "opt2", "name": "Con heo", "icon": "🐖", "isCorrect": false },
+        { "id": "opt3", "name": "Con bò", "icon": "🐄", "isCorrect": false },
+        { "id": "opt4", "name": "Con cừu", "icon": "🐑", "isCorrect": false }
+      ],
+      "correctFeedback": {
+        "videoUrl": "/videos/bear.mp4",
+        "soundUrl": "/sounds/bear.mp3",
+        "knowledge": "Kiến thức: Gấu nâu to lớn, lông màu nâu dày, thích ăn cá hồi và mật ong."
+      },
+      "incorrectFeedback": {
+        "videoUrl": "/videos/bear_wrong.mp4",
+        "soundUrl": "/sounds/wrong.mp3",
+        "knowledge": "Kiến thức: Chưa đúng rồi, chú gấu nâu có thân hình vạm vỡ, bộ lông màu nâu và rất thích ăn mật ong."
+      }
+    },
+    {
+      "id": 13,
+      "question": "Em hãy tìm chú chuột nhỏ tinh nghịch",
+      "score": 10,
+      "options": [
+        { "id": "opt1", "name": "Con thỏ", "icon": "🐇", "isCorrect": false },
+        { "id": "opt2", "name": "Con mèo", "icon": "🐱", "isCorrect": false },
+        { "id": "opt3", "name": "Con chuột", "icon": "🐭", "isCorrect": true },
+        { "id": "opt4", "name": "Con sóc", "icon": "🐿️", "isCorrect": false }
+      ],
+      "correctFeedback": {
+        "videoUrl": "/videos/mouse.mp4",
+        "soundUrl": "/sounds/mouse.mp3",
+        "knowledge": "Kiến thức: Chuột nhỏ bé, lông xám hoặc trắng, tai tròn và rất thích gặm nhấm hạt ngũ cốc."
+      },
+      "incorrectFeedback": {
+        "videoUrl": "/videos/mouse_wrong.mp4",
+        "soundUrl": "/sounds/wrong.mp3",
+        "knowledge": "Kiến thức: Không phải rồi, chú chuột rất nhỏ nhắn, có tai tròn và chiếc đuôi dài."
+      }
+    },
+    {
+      "id": 14,
+      "question": "Đâu là chú heo hồng phốc mũm mĩm ở nông trại?",
+      "score": 10,
+      "options": [
+        { "id": "opt1", "name": "Con bò", "icon": "🐄", "isCorrect": false },
+        { "id": "opt2", "name": "Con lợn (heo)", "icon": "🐖", "isCorrect": true },
+        { "id": "opt3", "name": "Con cừu", "icon": "🐑", "isCorrect": false },
+        { "id": "opt4", "name": "Con ngựa", "icon": "🐴", "isCorrect": false }
+      ],
+      "correctFeedback": {
+        "videoUrl": "/videos/pig.mp4",
+        "soundUrl": "/sounds/pig.mp3",
+        "knowledge": "Kiến thức: Heo có da màu hồng, thân hình mũm mĩm, sống ở nông trại và rất thích ăn rau củ."
+      },
+      "incorrectFeedback": {
+        "videoUrl": "/videos/pig_wrong.mp4",
+        "soundUrl": "/sounds/wrong.mp3",
+        "knowledge": "Kiến thức: Chưa chính xác em ơi, chú heo hồng mũm mĩm ở nông trại mới là đáp án đúng."
+      }
+    },
+    {
+      "id": 15,
+      "question": "Em hãy tìm chú bò sữa cho nguồn sữa tươi ngon",
+      "score": 10,
+      "options": [
+        { "id": "opt1", "name": "Con dê", "icon": "🐐", "isCorrect": false },
+        { "id": "opt2", "name": "Con ngựa", "icon": "🐴", "isCorrect": false },
+        { "id": "opt3", "name": "Con bò sữa", "icon": "🐄", "isCorrect": true },
+        { "id": "opt4", "name": "Con lợn", "icon": "🐖", "isCorrect": false }
+      ],
+      "correctFeedback": {
+        "videoUrl": "/videos/cow.mp4",
+        "soundUrl": "/sounds/cow.mp3",
+        "knowledge": "Kiến thức: Bò sữa có đốm đen trắng, ăn cỏ tươi và cho nguồn sữa thơm ngon bổ dưỡng."
+      },
+      "incorrectFeedback": {
+        "videoUrl": "/videos/cow_wrong.mp4",
+        "soundUrl": "/sounds/wrong.mp3",
+        "knowledge": "Kiến thức: Sai mất rồi, chú bò sữa có những đốm màu đen trắng đặc trưng và cho sữa tươi ngon."
+      }
+    },
+    {
+      "id": 16,
+      "question": "Đâu là chú cừu trắng với bộ lông xù ấm áp?",
+      "score": 10,
+      "options": [
+        { "id": "opt1", "name": "Con cừu", "icon": "🐑", "isCorrect": true },
+        { "id": "opt2", "name": "Con bò", "icon": "🐄", "isCorrect": false },
+        { "id": "opt3", "name": "Con heo", "icon": "🐖", "isCorrect": false },
+        { "id": "opt4", "name": "Con gà", "icon": "🐔", "isCorrect": false }
+      ],
+      "correctFeedback": {
+        "videoUrl": "/videos/sheep.mp4",
+        "soundUrl": "/sounds/sheep.mp3",
+        "knowledge": "Kiến thức: Cừu có bộ lông xù màu trắng xoăn tít, ăn cỏ và cho lông để dệt áo ấm."
+      },
+      "incorrectFeedback": {
+        "videoUrl": "/videos/sheep_wrong.mp4",
+        "soundUrl": "/sounds/wrong.mp3",
+        "knowledge": "Kiến thức: Chưa đúng rồi em ơi, chú cừu có bộ lông xù màu trắng giống như những đám mây."
+      }
+    },
+    {
+      "id": 17,
+      "question": "Em hãy tìm chú gà trống gáy o o vào buổi sáng",
+      "score": 10,
+      "options": [
+        { "id": "opt1", "name": "Con vịt", "icon": "🦆", "isCorrect": false },
+        { "id": "opt2", "name": "Con gà trống", "icon": "🐔", "isCorrect": true },
+        { "id": "opt3", "name": "Con chim", "icon": "🐦", "isCorrect": false },
+        { "id": "opt4", "name": "Con ngỗng", "icon": "🦢", "isCorrect": false }
+      ],
+      "correctFeedback": {
+        "videoUrl": "/videos/rooster.mp4",
+        "soundUrl": "/sounds/rooster.mp3",
+        "knowledge": "Kiến thức: Gà trống có mào đỏ rực, lông sặc sỡ và gáy báo thức buổi sáng."
+      },
+      "incorrectFeedback": {
+        "videoUrl": "/videos/rooster_wrong.mp4",
+        "soundUrl": "/sounds/wrong.mp3",
+        "knowledge": "Kiến thức: Không phải rồi, chú gà trống có mào đỏ rực và cất tiếng gáy báo thức vào buổi sáng."
+      }
+    },
+    {
+      "id": 18,
+      "question": "Đâu là chú mèo con thân thiện thích kêu meo meo?",
+      "score": 10,
+      "options": [
+        { "id": "opt1", "name": "Con chó", "icon": "🐶", "isCorrect": false },
+        { "id": "opt2", "name": "Con mèo", "icon": "🐱", "isCorrect": true },
+        { "id": "opt3", "name": "Con thỏ", "icon": "🐇", "isCorrect": false },
+        { "id": "opt4", "name": "Con chuột", "icon": "🐭", "isCorrect": false }
+      ],
+      "correctFeedback": {
+        "videoUrl": "/videos/cat.mp4",
+        "soundUrl": "/sounds/cat.mp3",
+        "knowledge": "Kiến thức: Mèo có lông mềm mại, mắt tinh anh, rất giỏi bắt chuột và hay kêu meo meo."
+      },
+      "incorrectFeedback": {
+        "videoUrl": "/videos/cat_wrong.mp4",
+        "soundUrl": "/sounds/wrong.mp3",
+        "knowledge": "Kiến thức: Chưa chính xác em nhé, chú mèo đáng yêu có lông mềm mại, giỏi bắt chuột và hay kêu meo meo."
+      }
+    },
+    {
+      "id": 19,
+      "question": "Đâu là chú chó trung thành giữ nhà rất giỏi?",
+      "score": 10,
+      "options": [
+        { "id": "opt1", "name": "Con mèo", "icon": "🐱", "isCorrect": false },
+        { "id": "opt2", "name": "Con cáo", "icon": "🦊", "isCorrect": false },
+        { "id": "opt3", "name": "Con chó", "icon": "🐶", "isCorrect": true },
+        { "id": "opt4", "name": "Con hổ", "icon": "🐅", "isCorrect": false }
+      ],
+      "correctFeedback": {
+        "videoUrl": "/videos/dog.mp4",
+        "soundUrl": "/sounds/dog.mp3",
+        "knowledge": "Kiến thức: Chó là vật nuôi trung thành, thính tai, giúp giữ nhà và rất thích gặm xương."
+      },
+      "incorrectFeedback": {
+        "videoUrl": "/videos/dog_wrong.mp4",
+        "soundUrl": "/sounds/wrong.mp3",
+        "knowledge": "Kiến thức: Sai mất rồi, chú chó trung thành là người bạn bảo vệ ngôi nhà tuyệt vời của con người."
+      }
+    },
+    {
+      "id": 20,
+      "question": "Em hãy tìm chú ngựa phi nước đại khỏe mạnh",
+      "score": 10,
+      "options": [
+        { "id": "opt1", "name": "Con ngựa", "icon": "🐴", "isCorrect": true },
+        { "id": "opt2", "name": "Con bò", "icon": "🐄", "isCorrect": false },
+        { "id": "opt3", "name": "Con cừu", "icon": "🐑", "isCorrect": false },
+        { "id": "opt4", "name": "Con lừa", "icon": "🫏", "isCorrect": false }
+      ],
+      "correctFeedback": {
+        "videoUrl": "/videos/horse.mp4",
+        "soundUrl": "/sounds/horse.mp3",
+        "knowledge": "Kiến thức: Ngựa có chân cao, bờm dài, ăn cỏ và phi nước đại cực kỳ nhanh."
+      },
+      "incorrectFeedback": {
+        "videoUrl": "/videos/horse_wrong.mp4",
+        "soundUrl": "/sounds/wrong.mp3",
+        "knowledge": "Kiến thức: Chưa đúng rồi em ơi, chú ngựa khỏe mạnh có đôi chân thon dài và chiếc bờm óng ả."
+      }
+    }
+  ]
+}
