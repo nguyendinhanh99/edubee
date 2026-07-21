@@ -22,8 +22,8 @@ export default function HomePage() {
       <div className="w-full max-w-2xl bg-white rounded-2xl shadow-xl p-6 border-4 border-purple-200">
         <div className="flex justify-between items-center border-b pb-4 mb-4">
           <div className="flex items-center gap-2">
-            <span className="bg-yellow-400 text-purple-900 font-extrabold px-3 py-1 rounded-lg text-lg">EduBee</span>
-            <span className="text-gray-600 font-medium">EduBee – Học mà chơi, chơi mà giỏi!</span>
+            <span className="bg-yellow-400 text-purple-900 font-extrabold px-3 py-1 rounded-lg text-lg">EduCat</span>
+            <span className="text-gray-600 font-medium">EduCat – Học mà chơi, chơi mà giỏi!</span>
           </div>
           <button 
             onClick={() => setIsFeedbackOpen(true)}

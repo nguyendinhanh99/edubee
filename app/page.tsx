@@ -21,7 +21,7 @@ export default function WelcomePage() {
         {/* Tên thương hiệu edubee */}
         <div className="mb-2">
           <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white drop-shadow-md">
-            edu<span className="text-amber-200">bee</span>
+            edu<span className="text-amber-200">cat</span>
           </h1>
         </div>
 
