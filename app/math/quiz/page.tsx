@@ -11,7 +11,7 @@ interface WrongQuestion {
   selectedOption: string;
   correctAnswer: string;
   explanation: string;
-  levelName: string;
+  lessonTitle: string; // Đã đổi từ levelName thành lessonTitle để đồng bộ dữ liệu
 }
 
 export default function MathQuizPage() {
@@ -56,7 +56,7 @@ export default function MathQuizPage() {
     }
   }, [currentIndex, currentLevelIndex, isLevelFinished, isAllCompleted]);
 
-  // Hàm lưu kết quả vào localStorage
+  // Hàm lưu kết quả vào localStorage với khóa 'math_quiz_history'
   const saveResultToLocalStorage = (finalScore: number, wrongs: WrongQuestion[]) => {
     try {
       if (finalScore > 0 || wrongs.length > 0) {
@@ -83,7 +83,6 @@ export default function MathQuizPage() {
     window.addEventListener('beforeunload', handleBeforeUnload);
     return () => {
       window.removeEventListener('beforeunload', handleBeforeUnload);
-      // Lưu kết quả khi unmount (bấm nút quay lại trên giao diện)
       if (!stateRef.current.isAllCompleted) {
         saveResultToLocalStorage(stateRef.current.score, stateRef.current.wrongQuestions);
       }
@@ -109,7 +108,7 @@ export default function MathQuizPage() {
         selectedOption: option,
         correctAnswer: currentQ.correctAnswer,
         explanation: currentQ.explanation,
-        levelName: currentLevel.levelName,
+        lessonTitle: `Quiz: ${currentLevel.levelName}`, // Đồng bộ thuộc tính hiển thị
       };
       setWrongQuestions(prev => [...prev, newWrongItem]);
     }
@@ -298,7 +297,7 @@ export default function MathQuizPage() {
               <div className="space-y-3 max-h-60 overflow-y-auto pr-2">
                 {wrongQuestions.map((item, idx) => (
                   <div key={idx} className="bg-rose-50/60 border border-rose-200 p-3 rounded-2xl text-sm">
-                    <p className="text-xs font-bold text-purple-600 mb-0.5">{item.levelName}</p>
+                    <p className="text-xs font-bold text-purple-600 mb-0.5">{item.lessonTitle}</p>
                     <p className="font-extrabold text-gray-800">{item.title} ({item.equation})</p>
                     <div className="mt-1 flex flex-wrap gap-2 text-xs">
                       <span className="bg-rose-100 text-rose-700 px-2 py-0.5 rounded-md font-medium">

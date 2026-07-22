@@ -17,6 +17,7 @@ interface ExerciseHistoryItem {
   date: string;
   score: number;
   wrongQuestions: WrongExerciseQuestion[];
+  gameType?: 'quiz' | 'exercise';
 }
 
 export default function MathResultsPage() {
@@ -25,13 +26,50 @@ export default function MathResultsPage() {
 
   useEffect(() => {
     try {
-      const savedHistory = localStorage.getItem('math_exercises_history');
-      if (savedHistory) {
-        const parsed: ExerciseHistoryItem[] = JSON.parse(savedHistory);
-        setHistory(parsed);
-        if (parsed.length > 0) {
-          setSelectedSessionIndex(0);
+      const savedExercises = localStorage.getItem('math_exercises_history');
+      const exercisesList: ExerciseHistoryItem[] = savedExercises 
+        ? JSON.parse(savedExercises).map((item: any) => ({ ...item, gameType: 'exercise' })) 
+        : [];
+
+      const savedQuiz = localStorage.getItem('math_quiz_history');
+      const quizList: ExerciseHistoryItem[] = savedQuiz 
+        ? JSON.parse(savedQuiz).map((item: any) => ({ ...item, gameType: 'quiz' })) 
+        : [];
+
+      const combinedHistory = [...exercisesList, ...quizList];
+
+      // Hàm bóc tách thời gian chính xác từ chuỗi ngày tháng tiếng Việt
+      const parseDateTime = (dateStr: string) => {
+        if (!dateStr) return 0;
+        try {
+          const cleanStr = dateStr.replace(/,/g, '').trim();
+          const parts = cleanStr.split(' ');
+          
+          let timePart = '';
+          let datePart = '';
+
+          parts.forEach(p => {
+            if (p.includes(':')) timePart = p;
+            if (p.includes('/')) datePart = p;
+          });
+
+          if (datePart && timePart) {
+            const [day, month, year] = datePart.split('/');
+            return new Date(`${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}T${timePart}`).getTime() || 0;
+          }
+          
+          return new Date(dateStr).getTime() || 0;
+        } catch (e) {
+          return 0;
         }
+      };
+
+      // Sắp xếp trộn lẫn hoàn toàn theo thời gian mới nhất lên đầu
+      combinedHistory.sort((a, b) => parseDateTime(b.date) - parseDateTime(a.date));
+
+      setHistory(combinedHistory);
+      if (combinedHistory.length > 0) {
+        setSelectedSessionIndex(0);
       }
     } catch (error) {
       console.warn("Không thể tải kết quả từ localStorage:", error);
@@ -42,7 +80,14 @@ export default function MathResultsPage() {
 
   // Tính toán thống kê tổng quan
   const totalSessions = history.length;
-  const bestScore = history.length > 0 ? Math.max(...history.map(item => item.score)) : 0;
+  
+  // Tách điểm cao nhất cho từng loại game riêng biệt
+  const quizScores = history.filter(item => item.gameType === 'quiz').map(item => item.score);
+  const exerciseScores = history.filter(item => item.gameType === 'exercise').map(item => item.score);
+
+  const bestQuizScore = quizScores.length > 0 ? Math.max(...quizScores) : 0;
+  const bestExerciseScore = exerciseScores.length > 0 ? Math.max(...exerciseScores) : 0;
+  
   const totalCorrectAnswers = history.reduce((acc, curr) => acc + curr.score, 0);
 
   return (
@@ -72,29 +117,37 @@ export default function MathResultsPage() {
         </p>
       </div>
 
-      {/* Thẻ thống kê tổng quan (Dashboard Stats) */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl w-full mb-8">
-        <div className="bg-white rounded-3xl p-6 border-2 border-amber-200 shadow-md flex items-center space-x-4">
-          <div className="text-4xl bg-amber-100 p-3 rounded-2xl">🎯</div>
+      {/* Thẻ thống kê tổng quan (Dashboard Stats - Chia điểm cao nhất ra 2 game) */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl w-full mb-8">
+        <div className="bg-white rounded-3xl p-5 border-2 border-amber-200 shadow-md flex items-center space-x-3">
+          <div className="text-3xl bg-amber-100 p-2.5 rounded-2xl">🎯</div>
           <div>
-            <p className="text-xs text-gray-500 font-bold uppercase">Tổng số lần làm bài</p>
-            <p className="text-2xl font-extrabold text-gray-800">{totalSessions} <span className="text-sm font-normal text-gray-500">lần</span></p>
+            <p className="text-[11px] text-gray-500 font-bold uppercase">Tổng hoạt động</p>
+            <p className="text-xl font-extrabold text-gray-800">{totalSessions} <span className="text-xs font-normal text-gray-500">lần</span></p>
           </div>
         </div>
 
-        <div className="bg-white rounded-3xl p-6 border-2 border-purple-200 shadow-md flex items-center space-x-4">
-          <div className="text-4xl bg-purple-100 p-3 rounded-2xl">👑</div>
+        <div className="bg-white rounded-3xl p-5 border-2 border-pink-200 shadow-md flex items-center space-x-3">
+          <div className="text-3xl bg-pink-100 p-2.5 rounded-2xl">🎮</div>
           <div>
-            <p className="text-xs text-gray-500 font-bold uppercase">Điểm cao nhất</p>
-            <p className="text-2xl font-extrabold text-purple-600">{bestScore} <span className="text-sm font-normal text-gray-500">điểm</span></p>
+            <p className="text-[11px] text-gray-500 font-bold uppercase">Điểm Quiz cao nhất</p>
+            <p className="text-xl font-extrabold text-pink-600">{bestQuizScore} <span className="text-xs font-normal text-gray-500">điểm</span></p>
           </div>
         </div>
 
-        <div className="bg-white rounded-3xl p-6 border-2 border-emerald-200 shadow-md flex items-center space-x-4">
-          <div className="text-4xl bg-emerald-100 p-3 rounded-2xl">⭐</div>
+        <div className="bg-white rounded-3xl p-5 border-2 border-indigo-200 shadow-md flex items-center space-x-3">
+          <div className="text-3xl bg-indigo-100 p-2.5 rounded-2xl">📝</div>
           <div>
-            <p className="text-xs text-gray-500 font-bold uppercase">Tổng câu đúng tích lũy</p>
-            <p className="text-2xl font-extrabold text-emerald-600">{totalCorrectAnswers} <span className="text-sm font-normal text-gray-500">câu</span></p>
+            <p className="text-[11px] text-gray-500 font-bold uppercase">Điểm Bài tập cao nhất</p>
+            <p className="text-xl font-extrabold text-indigo-600">{bestExerciseScore} <span className="text-xs font-normal text-gray-500">điểm</span></p>
+          </div>
+        </div>
+
+        <div className="bg-white rounded-3xl p-5 border-2 border-emerald-200 shadow-md flex items-center space-x-3">
+          <div className="text-3xl bg-emerald-100 p-2.5 rounded-2xl">⭐</div>
+          <div>
+            <p className="text-[11px] text-gray-500 font-bold uppercase">Tổng điểm tích lũy</p>
+            <p className="text-xl font-extrabold text-emerald-600">{totalCorrectAnswers} <span className="text-xs font-normal text-gray-500">điểm</span></p>
           </div>
         </div>
       </div>
@@ -107,36 +160,45 @@ export default function MathResultsPage() {
               Nhật ký chi tiết
             </span>
             <h3 className="text-xl font-extrabold text-gray-800 mt-1">
-              📊 Lịch sử làm bài tập thực hành
+              📊 Lịch sử Quiz & Bài tập thực hành
             </h3>
           </div>
-          <Link
-            href="/math/exercises"
-            className="text-sm font-bold text-white bg-indigo-600 hover:bg-indigo-700 px-5 py-2.5 rounded-2xl shadow transition"
-          >
-            Làm thêm bài tập mới 📝
-          </Link>
+          <div className="flex gap-2">
+            <Link
+              href="/math/quiz"
+              className="text-xs font-bold text-white bg-pink-600 hover:bg-pink-700 px-4 py-2.5 rounded-2xl shadow transition"
+            >
+              Chơi Quiz 🎮
+            </Link>
+            <Link
+              href="/math/exercises"
+              className="text-xs font-bold text-white bg-indigo-600 hover:bg-indigo-700 px-4 py-2.5 rounded-2xl shadow transition"
+            >
+              Làm bài tập 📝
+            </Link>
+          </div>
         </div>
 
         {history.length === 0 ? (
           <div className="text-center py-12 text-gray-500 flex flex-col items-center">
             <span className="text-6xl mb-3">📭</span>
-            <p className="text-base font-bold text-gray-700">Chưa có kết quả bài tập nào được ghi nhận.</p>
-            <p className="text-sm text-gray-500 mt-1 mb-4">Bé hãy thử tham gia làm bài tập thực hành để tích lũy điểm số nhé!</p>
+            <p className="text-base font-bold text-gray-700">Chưa có kết quả hoạt động nào được ghi nhận.</p>
+            <p className="text-sm text-gray-500 mt-1 mb-4">Bé hãy thử tham gia trò chơi hoặc bài tập để tích lũy điểm số nhé!</p>
             <Link
-              href="/math/exercises"
+              href="/math/quiz"
               className="text-sm font-bold text-white bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-2xl shadow-lg transition"
             >
-              Bắt đầu làm bài ngay 🚀
+              Bắt đầu chơi ngay 🚀
             </Link>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Cột trái: Danh sách các phiên làm bài */}
+            {/* Cột trái: Danh sách các phiên hoạt động trộn lẫn, sắp xếp theo thời gian mới nhất */}
             <div className="md:col-span-1 border-r md:pr-4 flex flex-col gap-2 max-h-96 overflow-y-auto">
-              <p className="text-xs font-bold text-gray-500 uppercase mb-1">Danh sách các lần làm:</p>
+              <p className="text-xs font-bold text-gray-500 uppercase mb-1">Danh sách các lần chơi/làm:</p>
               {history.map((session, idx) => {
                 const isSelected = selectedSessionIndex === idx;
+                const isQuiz = session.gameType === 'quiz';
                 return (
                   <button
                     key={idx}
@@ -148,7 +210,13 @@ export default function MathResultsPage() {
                     }`}
                   >
                     <div className="flex justify-between items-center text-xs font-bold">
-                      <span>Lần #{history.length - idx}</span>
+                      <span className={`px-2 py-0.5 rounded-md text-[10px] uppercase font-extrabold ${
+                        isQuiz 
+                          ? (isSelected ? 'bg-pink-700 text-white' : 'bg-pink-100 text-pink-700')
+                          : (isSelected ? 'bg-indigo-700 text-white' : 'bg-indigo-100 text-indigo-700')
+                      }`}>
+                        {isQuiz ? '🎮 Quiz' : '📝 Bài tập'}
+                      </span>
                       <span className={`px-2.5 py-0.5 rounded-full ${isSelected ? 'bg-purple-700 text-white' : 'bg-amber-100 text-amber-800'}`}>
                         {session.score} điểm
                       </span>
@@ -161,14 +229,20 @@ export default function MathResultsPage() {
               })}
             </div>
 
-            {/* Cột phải: Chi tiết phiên làm bài được chọn */}
+            {/* Cột phải: Chi tiết phiên hoạt động được chọn */}
             <div className="md:col-span-2 flex flex-col gap-4">
               {currentSelectedSession && (
                 <>
                   <div className="flex flex-wrap items-center justify-between bg-amber-50/80 p-4 rounded-2xl border border-amber-200">
                     <div>
-                      <p className="text-xs text-gray-500">🕒 Thời gian nộp bài:</p>
-                      <p className="text-sm font-bold text-gray-800">{currentSelectedSession.date}</p>
+                      <div className="flex items-center gap-2 mb-1">
+                        <span className={`px-2.5 py-0.5 rounded-full text-xs font-bold ${
+                          currentSelectedSession.gameType === 'quiz' ? 'bg-pink-100 text-pink-700' : 'bg-indigo-100 text-indigo-700'
+                        }`}>
+                          {currentSelectedSession.gameType === 'quiz' ? '🎮 Trò chơi Math Quiz' : '📝 Bài tập thực hành'}
+                        </span>
+                      </div>
+                      <p className="text-xs text-gray-500">🕒 Thời gian: <span className="font-bold text-gray-800">{currentSelectedSession.date}</span></p>
                     </div>
                     <div className="mt-2 sm:mt-0 bg-white px-5 py-2.5 rounded-xl shadow-sm border border-amber-200 text-center">
                       <span className="text-xs text-gray-500 block">Điểm số:</span>
@@ -179,25 +253,25 @@ export default function MathResultsPage() {
                   <div>
                     <h4 className="font-bold text-gray-700 text-sm mb-3 flex items-center justify-between">
                       <span>📋 Chi tiết các câu trả lời sai:</span>
-                      <span className={`text-xs px-2.5 py-1 rounded-full font-medium ${currentSelectedSession.wrongQuestions.length === 0 ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' : 'bg-rose-50 text-rose-700 border border-rose-200'}`}>
-                        {currentSelectedSession.wrongQuestions.length === 0 ? 'Hoàn hảo! Không sai câu nào 🎉' : `${currentSelectedSession.wrongQuestions.length} câu cần ôn tập`}
+                      <span className={`text-xs px-2.5 py-1 rounded-full font-medium ${(!currentSelectedSession.wrongQuestions || currentSelectedSession.wrongQuestions.length === 0) ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' : 'bg-rose-50 text-rose-700 border border-rose-200'}`}>
+                        {(!currentSelectedSession.wrongQuestions || currentSelectedSession.wrongQuestions.length === 0) ? 'Hoàn hảo! Không sai câu nào 🎉' : `${currentSelectedSession.wrongQuestions.length} câu cần ôn tập`}
                       </span>
                     </h4>
 
-                    {currentSelectedSession.wrongQuestions.length === 0 ? (
+                    {(!currentSelectedSession.wrongQuestions || currentSelectedSession.wrongQuestions.length === 0) ? (
                       <div className="bg-emerald-50 border-2 border-emerald-200 text-emerald-800 p-6 rounded-3xl text-center">
                         <p className="text-2xl mb-1">🎉</p>
                         <p className="font-extrabold text-base mb-1">Xuất sắc quá!</p>
-                        <p className="text-sm font-medium">Bé đã trả lời đúng toàn bộ câu hỏi trong lần làm bài này.</p>
+                        <p className="text-sm font-medium">Bé đã trả lời đúng toàn bộ câu hỏi trong phiên này.</p>
                       </div>
                     ) : (
                       <div className="space-y-3 max-h-72 overflow-y-auto pr-1">
                         {currentSelectedSession.wrongQuestions.map((item, idx) => (
                           <div key={idx} className="bg-rose-50/60 border border-rose-200 p-4 rounded-2xl text-xs flex flex-col gap-1.5 shadow-sm">
                             <span className="font-extrabold text-purple-700 bg-purple-50 px-2.5 py-0.5 rounded-md w-fit border border-purple-100">
-                              📚 {item.lessonTitle}
+                              📚 {item.lessonTitle || 'Câu hỏi'}
                             </span>
-                            <p className="font-extrabold text-gray-800 text-sm mt-1">{item.title} ({item.equation})</p>
+                            <p className="font-extrabold text-gray-800 text-sm mt-1">{item.title} {item.equation ? `(${item.equation})` : ''}</p>
                             <div className="flex flex-wrap gap-3 mt-1">
                               <span className="text-rose-700 bg-rose-100 px-2.5 py-1 rounded-lg font-semibold">
                                 Bé chọn: <strong>{item.selectedOption}</strong>
@@ -206,9 +280,11 @@ export default function MathResultsPage() {
                                 Đáp án đúng: <strong>{item.correctAnswer}</strong>
                               </span>
                             </div>
-                            <p className="text-gray-600 italic mt-1 bg-white p-2 rounded-xl border border-rose-100">
-                              💡 <strong>Giải thích:</strong> {item.explanation}
-                            </p>
+                            {item.explanation && (
+                              <p className="text-gray-600 italic mt-1 bg-white p-2 rounded-xl border border-rose-100">
+                                💡 <strong>Giải thích:</strong> {item.explanation}
+                              </p>
+                            )}
                           </div>
                         ))}
                       </div>
