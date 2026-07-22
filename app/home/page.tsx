@@ -11,7 +11,7 @@ export default function HomePage() {
   const subjects = [
     { name: 'Động vật', icon: '🦊', active: true, href: '/quiz' },
     { name: 'Tiếng Việt', icon: '📖', active: false },
-    { name: 'Toán', icon: '🔢', active: false },
+    { name: 'Toán', icon: '🔢', active: true, href: '/math'},
     { name: 'Khoa học', icon: '🔬', active: false },
     { name: 'Nghệ thuật', icon: '🎨', active: false },
     { name: 'Văn hóa', icon: '🏮', active: false },

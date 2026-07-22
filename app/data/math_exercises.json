@@ -1,0 +1,164 @@
+{
+  "lessons": [
+    {
+      "id": "lesson-1",
+      "title": "Bài 1: Làm quen phép cộng trong phạm vi 10",
+      "questions": [
+        { "id": 1, "title": "Bé hãy tính kết quả:", "equation": "1 + 1 = ?", "options": ["1", "2", "3", "4"], "correctAnswer": "2", "explanation": "1 cộng 1 bằng 2." },
+        { "id": 2, "title": "Bé hãy tính kết quả:", "equation": "2 + 2 = ?", "options": ["3", "4", "5", "6"], "correctAnswer": "4", "explanation": "2 cộng 2 bằng 4." },
+        { "id": 3, "title": "Bé hãy tính kết quả:", "equation": "3 + 1 = ?", "options": ["3", "4", "5", "6"], "correctAnswer": "4", "explanation": "3 thêm 1 là 4." },
+        { "id": 4, "title": "Bé hãy tính kết quả:", "equation": "2 + 3 = ?", "options": ["4", "5", "6", "7"], "correctAnswer": "5", "explanation": "2 cộng 3 bằng 5." },
+        { "id": 5, "title": "Bé hãy tính kết quả:", "equation": "4 + 2 = ?", "options": ["5", "6", "7", "8"], "correctAnswer": "6", "explanation": "4 thêm 2 là 6." },
+        { "id": 6, "title": "Bé hãy tính kết quả:", "equation": "3 + 4 = ?", "options": ["6", "7", "8", "9"], "correctAnswer": "7", "explanation": "3 cộng 4 bằng 7." },
+        { "id": 7, "title": "Bé hãy tính kết quả:", "equation": "5 + 3 = ?", "options": ["7", "8", "9", "10"], "correctAnswer": "8", "explanation": "5 thêm 3 là 8." },
+        { "id": 8, "title": "Bé hãy tính kết quả:", "equation": "4 + 5 = ?", "options": ["8", "9", "10", "6"], "correctAnswer": "9", "explanation": "4 cộng 5 bằng 9." },
+        { "id": 9, "title": "Bé hãy tính kết quả:", "equation": "5 + 5 = ?", "options": ["8", "9", "10", "7"], "correctAnswer": "10", "explanation": "5 cộng 5 bằng 10." },
+        { "id": 10, "title": "Bé hãy tính kết quả:", "equation": "1 + 4 = ?", "options": ["3", "4", "5", "6"], "correctAnswer": "5", "explanation": "1 cộng 4 bằng 5." }
+      ]
+    },
+    {
+      "id": "lesson-2",
+      "title": "Bài 2: Làm quen phép trừ trong phạm vi 10",
+      "questions": [
+        { "id": 11, "title": "Bé hãy tính kết quả:", "equation": "2 - 1 = ?", "options": ["0", "1", "2", "3"], "correctAnswer": "1", "explanation": "2 bớt 1 còn 1." },
+        { "id": 12, "title": "Bé hãy tính kết quả:", "equation": "3 - 2 = ?", "options": ["1", "2", "3", "4"], "correctAnswer": "1", "explanation": "3 bớt 2 còn 1." },
+        { "id": 13, "title": "Bé hãy tính kết quả:", "equation": "4 - 2 = ?", "options": ["1", "2", "3", "4"], "correctAnswer": "2", "explanation": "4 bớt 2 còn 2." },
+        { "id": 14, "title": "Bé hãy tính kết quả:", "equation": "5 - 3 = ?", "options": ["1", "2", "3", "4"], "correctAnswer": "2", "explanation": "5 bớt 3 còn 2." },
+        { "id": 15, "title": "Bé hãy tính kết quả:", "equation": "6 - 3 = ?", "options": ["2", "3", "4", "5"], "correctAnswer": "3", "explanation": "6 bớt 3 còn 3." },
+        { "id": 16, "title": "Bé hãy tính kết quả:", "equation": "7 - 4 = ?", "options": ["2", "3", "4", "5"], "correctAnswer": "3", "explanation": "7 bớt 4 còn 3." },
+        { "id": 17, "title": "Bé hãy tính kết quả:", "equation": "8 - 4 = ?", "options": ["3", "4", "5", "6"], "correctAnswer": "4", "explanation": "8 bớt 4 còn 4." },
+        { "id": 18, "title": "Bé hãy tính kết quả:", "equation": "9 - 5 = ?", "options": ["3", "4", "5", "6"], "correctAnswer": "4", "explanation": "9 bớt 5 còn 4." },
+        { "id": 19, "title": "Bé hãy tính kết quả:", "equation": "10 - 5 = ?", "options": ["3", "4", "5", "6"], "correctAnswer": "5", "explanation": "10 bớt 5 còn 5." },
+        { "id": 20, "title": "Bé hãy tính kết quả:", "equation": "5 - 5 = ?", "options": ["0", "1", "2", "5"], "correctAnswer": "0", "explanation": "5 trừ 5 bằng 0." }
+      ]
+    },
+    {
+      "id": "lesson-3",
+      "title": "Bài 3: Tìm số còn thiếu trong phép cộng",
+      "questions": [
+        { "id": 21, "title": "Tìm số thích hợp điền vào chỗ chấm:", "equation": "1 + ... = 3", "options": ["1", "2", "3", "4"], "correctAnswer": "2", "explanation": "1 thêm 2 bằng 3." },
+        { "id": 22, "title": "Tìm số thích hợp điền vào chỗ chấm:", "equation": "2 + ... = 5", "options": ["2", "3", "4", "5"], "correctAnswer": "3", "explanation": "2 thêm 3 bằng 5." },
+        { "id": 23, "title": "Tìm số thích hợp điền vào chỗ chấm:", "equation": "... + 3 = 4", "options": ["1", "2", "3", "4"], "correctAnswer": "1", "explanation": "1 thêm 3 bằng 4." },
+        { "id": 24, "title": "Tìm số thích hợp điền vào chỗ chấm:", "equation": "3 + ... = 6", "options": ["2", "3", "4", "5"], "correctAnswer": "3", "explanation": "3 thêm 3 bằng 6." },
+        { "id": 25, "title": "Tìm số thích hợp điền vào chỗ chấm:", "equation": "... + 4 = 7", "options": ["2", "3", "4", "5"], "correctAnswer": "3", "explanation": "3 thêm 4 bằng 7." },
+        { "id": 26, "title": "Tìm số thích hợp điền vào chỗ chấm:", "equation": "4 + ... = 8", "options": ["2", "3", "4", "5"], "correctAnswer": "4", "explanation": "4 thêm 4 bằng 8." },
+        { "id": 27, "title": "Tìm số thích hợp điền vào chỗ chấm:", "equation": "... + 5 = 9", "options": ["2", "3", "4", "5"], "correctAnswer": "4", "explanation": "4 thêm 5 bằng 9." },
+        { "id": 28, "title": "Tìm số thích hợp điền vào chỗ chấm:", "equation": "5 + ... = 10", "options": ["3", "4", "5", "6"], "correctAnswer": "5", "explanation": "5 thêm 5 bằng 10." },
+        { "id": 29, "title": "Tìm số thích hợp điền vào chỗ chấm:", "equation": "... + 2 = 6", "options": ["2", "3", "4", "5"], "correctAnswer": "4", "explanation": "4 thêm 2 bằng 6." },
+        { "id": 30, "title": "Tìm số thích hợp điền vào chỗ chấm:", "equation": "6 + ... = 10", "options": ["2", "3", "4", "5"], "correctAnswer": "4", "explanation": "6 thêm 4 bằng 10." }
+      ]
+    },
+    {
+      "id": "lesson-4",
+      "title": "Bài 4: Tìm số còn thiếu trong phép trừ",
+      "questions": [
+        { "id": 31, "title": "Tìm số thích hợp điền vào chỗ chấm:", "equation": "3 - ... = 2", "options": ["1", "2", "3", "4"], "correctAnswer": "1", "explanation": "3 bớt 1 còn 2." },
+        { "id": 32, "title": "Tìm số thích hợp điền vào chỗ chấm:", "equation": "5 - ... = 3", "options": ["1", "2", "3", "4"], "correctAnswer": "2", "explanation": "5 bớt 2 còn 3." },
+        { "id": 33, "title": "Tìm số thích hợp điền vào chỗ chấm:", "equation": "... - 1 = 3", "options": ["2", "3", "4", "5"], "correctAnswer": "4", "explanation": "4 bớt 1 còn 3." },
+        { "id": 34, "title": "Tìm số thích hợp điền vào chỗ chấm:", "equation": "6 - ... = 4", "options": ["1", "2", "3", "4"], "correctAnswer": "2", "explanation": "6 bớt 2 còn 4." },
+        { "id": 35, "title": "Tìm số thích hợp điền vào chỗ chấm:", "equation": "... - 2 = 4", "options": ["5", "6", "7", "8"], "correctAnswer": "6", "explanation": "6 bớt 2 còn 4." },
+        { "id": 36, "title": "Tìm số thích hợp điền vào chỗ chấm:", "equation": "8 - ... = 5", "options": ["1", "2", "3", "4"], "correctAnswer": "3", "explanation": "8 bớt 3 còn 5." },
+        { "id": 37, "title": "Tìm số thích hợp điền vào chỗ chấm:", "equation": "... - 3 = 4", "options": ["5", "6", "7", "8"], "correctAnswer": "7", "explanation": "7 bớt 3 còn 4." },
+        { "id": 38, "title": "Tìm số thích hợp điền vào chỗ chấm:", "equation": "9 - ... = 6", "options": ["1", "2", "3", "4"], "correctAnswer": "3", "explanation": "9 bớt 3 còn 6." },
+        { "id": 39, "title": "Tìm số thích hợp điền vào chỗ chấm:", "equation": "... - 4 = 5", "options": ["7", "8", "9", "10"], "correctAnswer": "9", "explanation": "9 bớt 4 còn 5." },
+        { "id": 40, "title": "Tìm số thích hợp điền vào chỗ chấm:", "equation": "10 - ... = 7", "options": ["1", "2", "3", "4"], "correctAnswer": "3", "explanation": "10 bớt 3 còn 7." }
+      ]
+    },
+    {
+      "id": "lesson-5",
+      "title": "Bài 5: So sánh lớn hơn, bé hơn",
+      "questions": [
+        { "id": 41, "title": "Số nào lớn hơn trong hai số sau?", "equation": "So sánh 2 và 5", "options": ["2", "5", "Bằng nhau", "Không rõ"], "correctAnswer": "5", "explanation": "Số 5 lớn hơn số 2." },
+        { "id": 42, "title": "Số nào bé hơn trong hai số sau?", "equation": "So sánh 7 và 3", "options": ["7", "3", "Bằng nhau", "Không rõ"], "correctAnswer": "3", "explanation": "Số 3 bé hơn số 7." },
+        { "id": 43, "title": "Điền dấu thích hợp:", "equation": "4 ... 4", "options": [">", "<", "=", "Không rõ"], "correctAnswer": "=", "explanation": "4 bằng 4." },
+        { "id": 44, "title": "Số nào lớn hơn trong hai số sau?", "equation": "So sánh 8 và 6", "options": ["8", "6", "Bằng nhau", "Không rõ"], "correctAnswer": "8", "explanation": "Số 8 lớn hơn số 6." },
+        { "id": 45, "title": "Số nào bé hơn trong hai số sau?", "equation": "So sánh 1 và 9", "options": ["1", "9", "Bằng nhau", "Không rõ"], "correctAnswer": "1", "explanation": "Số 1 bé hơn số 9." },
+        { "id": 46, "title": "Điền dấu thích hợp:", "equation": "3 ... 5", "options": [">", "<", "=", "Không rõ"], "correctAnswer": "<", "explanation": "3 bé hơn 5." },
+        { "id": 47, "title": "Điền dấu thích hợp:", "equation": "7 ... 2", "options": [">", "<", "=", "Không rõ"], "correctAnswer": ">", "explanation": "7 lớn hơn 2." },
+        { "id": 48, "title": "Số nào lớn nhất trong ba số?", "equation": "So sánh 3, 8, 5", "options": ["3", "8", "5", "Như nhau"], "correctAnswer": "8", "explanation": "Số 8 là số lớn nhất." },
+        { "id": 49, "title": "Số nào bé nhất trong ba số?", "equation": "So sánh 6, 2, 9", "options": ["6", "2", "9", "Như nhau"], "correctAnswer": "2", "explanation": "Số 2 là số bé nhất." },
+        { "id": 50, "title": "Điền dấu thích hợp:", "equation": "10 ... 10", "options": [">", "<", "=", "Không rõ"], "correctAnswer": "=", "explanation": "10 bằng 10." }
+      ]
+    },
+    {
+      "id": "lesson-6",
+      "title": "Bài 6: Toán đố thêm bớt thực tế",
+      "questions": [
+        { "id": 51, "title": "Lan có 3 quả táo, mẹ cho thêm 2 quả. Hỏi Lan có mấy quả?", "equation": "3 + 2 = ?", "options": ["4", "5", "6", "7"], "correctAnswer": "5", "explanation": "3 thêm 2 bằng 5 quả táo." },
+        { "id": 52, "title": "Bình có 5 cái kẹo, ăn mất 2 cái. Hỏi Bình còn mấy cái?", "equation": "5 - 2 = ?", "options": ["1", "2", "3", "4"], "correctAnswer": "3", "explanation": "5 bớt 2 còn 3 cái kẹo." },
+        { "id": 53, "title": "Có 4 con chim trên cành, bay đến thêm 3 con. Hỏi có mấy con?", "equation": "4 + 3 = ?", "options": ["6", "7", "8", "9"], "correctAnswer": "7", "explanation": "4 thêm 3 bằng 7 con chim." },
+        { "id": 54, "title": "Hồ nước có 6 con cá, bơi đi mất 4 con. Hỏi còn mấy con?", "equation": "6 - 4 = ?", "options": ["1", "2", "3", "4"], "correctAnswer": "2", "explanation": "6 bớt 4 còn 2 con cá." },
+        { "id": 55, "title": "Nam gấp được 5 chiếc thuyền, gấp thêm 3 chiếc nữa. Tổng cộng?", "equation": "5 + 3 = ?", "options": ["7", "8", "9", "10"], "correctAnswer": "8", "explanation": "5 cộng 3 bằng 8 chiếc thuyền." },
+        { "id": 56, "title": "Vườn có 8 bông hoa, hái đi 3 bông. Hỏi còn lại mấy bông?", "equation": "8 - 3 = ?", "options": ["4", "5", "6", "7"], "correctAnswer": "5", "explanation": "8 bớt 3 còn 5 bông hoa." },
+        { "id": 57, "title": "Trên sân có 2 bạn đang chơi, chạy đến thêm 5 bạn nữa. Tổng số bạn?", "equation": "2 + 5 = ?", "options": ["6", "7", "8", "9"], "correctAnswer": "7", "explanation": "2 thêm 5 bằng 7 bạn." },
+        { "id": 58, "title": "Mua 10 quả trứng, vỡ mất 3 quả. Hỏi còn mấy quả nguyên?", "equation": "10 - 3 = ?", "options": ["6", "7", "8", "9"], "correctAnswer": "7", "explanation": "10 trừ 3 còn 7 quả trứng." },
+        { "id": 59, "title": "An có 4 viên bi, hùng cho thêm 4 viên nữa. An có mấy viên?", "equation": "4 + 4 = ?", "options": ["6", "7", "8", "9"], "correctAnswer": "8", "explanation": "4 cộng 4 bằng 8 viên bi." },
+        { "id": 60, "title": "Có 7 chiếc bánh, ăn hết 5 chiếc. Còn lại mấy chiếc bánh?", "equation": "7 - 5 = ?", "options": ["1", "2", "3", "4"], "correctAnswer": "2", "explanation": "7 bớt 5 còn 2 chiếc bánh." }
+      ]
+    },
+    {
+      "id": "lesson-7",
+      "title": "Bài 7: Điền số thích hợp vào dãy số",
+      "questions": [
+        { "id": 61, "title": "Tìm số còn thiếu trong dãy:", "equation": "1, 2, ..., 4, 5", "options": ["2", "3", "5", "6"], "correctAnswer": "3", "explanation": "Số đứng giữa 2 và 4 là 3." },
+        { "id": 62, "title": "Tìm số còn thiếu trong dãy:", "equation": "3, 4, 5, ..., 7", "options": ["5", "6", "7", "8"], "correctAnswer": "6", "explanation": "Số đứng giữa 5 và 7 là 6." },
+        { "id": 63, "title": "Tìm số tiếp theo của dãy:", "equation": "2, 4, 6, ...", "options": ["7", "8", "9", "10"], "correctAnswer": "8", "explanation": "Dãy đếm thêm 2: 2, 4, 6, 8." },
+        { "id": 64, "title": "Tìm số còn thiếu trong dãy:", "equation": "..., 2, 3, 4, 5", "options": ["0", "1", "2", "3"], "correctAnswer": "1", "explanation": "Số đứng trước 2 là 1." },
+        { "id": 65, "title": "Tìm số tiếp theo của dãy đếm lùi:", "equation": "5, 4, 3, ...", "options": ["1", "2", "0", "3"], "correctAnswer": "2", "explanation": "Đếm lùi từ 5 về: 5, 4, 3, 2." },
+        { "id": 66, "title": "Tìm số còn thiếu trong dãy:", "equation": "6, 7, ..., 9, 10", "options": ["7", "8", "9", "10"], "correctAnswer": "8", "explanation": "Số đứng giữa 7 và 9 là 8." },
+        { "id": 67, "title": "Tìm số còn thiếu trong dãy:", "equation": "1, ..., 3, 4, 5", "options": ["1", "2", "3", "4"], "correctAnswer": "2", "explanation": "Số đứng giữa 1 và 3 là 2." },
+        { "id": 68, "title": "Tìm số còn thiếu trong dãy:", "equation": "4, 5, 6, 7, ...", "options": ["7", "8", "9", "10"], "correctAnswer": "8", "explanation": "Số tiếp theo sau 7 là 8." },
+        { "id": 69, "title": "Tìm số còn thiếu trong dãy:", "equation": "7, 8, ..., 10", "options": ["8", "9", "6", "5"], "correctAnswer": "9", "explanation": "Số đứng giữa 8 và 10 là 9." },
+        { "id": 70, "title": "Tìm số đứng đầu dãy:", "equation": "..., 2, 3, 4", "options": ["0", "1", "2", "5"], "correctAnswer": "1", "explanation": "Số bắt đầu của dãy là 1." }
+      ]
+    },
+    {
+      "id": "lesson-8",
+      "title": "Bài 8: Phép tính chuỗi kết hợp (Cộng & Trừ)",
+      "questions": [
+        { "id": 71, "title": "Bé tính kết quả:", "equation": "1 + 2 + 1 = ?", "options": ["3", "4", "5", "6"], "correctAnswer": "4", "explanation": "1 + 2 = 3, sau đó 3 + 1 = 4." },
+        { "id": 72, "title": "Bé tính kết quả:", "equation": "3 + 2 - 1 = ?", "options": ["3", "4", "5", "6"], "correctAnswer": "4", "explanation": "3 + 2 = 5, sau đó 5 - 1 = 4." },
+        { "id": 73, "title": "Bé tính kết quả:", "equation": "5 - 2 + 1 = ?", "options": ["2", "3", "4", "5"], "correctAnswer": "4", "explanation": "5 - 2 = 3, sau đó 3 + 1 = 4." },
+        { "id": 74, "title": "Bé tính kết quả:", "equation": "4 + 3 - 2 = ?", "options": ["3", "4", "5", "6"], "correctAnswer": "5", "explanation": "4 + 3 = 7, sau đó 7 - 2 = 5." },
+        { "id": 75, "title": "Bé tính kết quả:", "equation": "6 - 3 + 2 = ?", "options": ["3", "4", "5", "6"], "correctAnswer": "5", "explanation": "6 - 3 = 3, sau đó 3 + 2 = 5." },
+        { "id": 76, "title": "Bé tính kết quả:", "equation": "2 + 2 + 2 = ?", "options": ["4", "5", "6", "7"], "correctAnswer": "6", "explanation": "2 + 2 = 4, sau đó 4 + 2 = 6." },
+        { "id": 77, "title": "Bé tính kết quả:", "equation": "7 - 2 - 2 = ?", "options": ["2", "3", "4", "5"], "correctAnswer": "3", "explanation": "7 - 2 = 5, sau đó 5 - 2 = 3." },
+        { "id": 78, "title": "Bé tính kết quả:", "equation": "1 + 4 - 3 = ?", "options": ["1", "2", "3", "4"], "correctAnswer": "2", "explanation": "1 + 4 = 5, sau đó 5 - 3 = 2." },
+        { "id": 79, "title": "Bé tính kết quả:", "equation": "8 - 4 + 2 = ?", "options": ["4", "5", "6", "7"], "correctAnswer": "6", "explanation": "8 - 4 = 4, sau đó 4 + 2 = 6." },
+        { "id": 80, "title": "Bé tính kết quả:", "equation": "3 + 3 - 3 = ?", "options": ["0", "1", "3", "6"], "correctAnswer": "3", "explanation": "3 + 3 = 6, sau đó 6 - 3 = 3." }
+      ]
+    },
+    {
+      "id": "lesson-9",
+      "title": "Bài 9: So sánh kết quả các phép tính",
+      "questions": [
+        { "id": 81, "title": "Phép tính nào có kết quả lớn hơn?", "equation": "So sánh (2 + 3) và (1 + 4)", "options": ["2 + 3", "1 + 4", "Bằng nhau", "Không rõ"], "correctAnswer": "Bằng nhau", "explanation": "2 + 3 = 5 và 1 + 4 = 5 (Bằng nhau)." },
+        { "id": 82, "title": "Phép tính nào có kết quả lớn hơn?", "equation": "So sánh (5 + 2) và (4 + 1)", "options": ["5 + 2", "4 + 1", "Bằng nhau", "Không rõ"], "correctAnswer": "5 + 2", "explanation": "5 + 2 = 7 lớn hơn 4 + 1 = 5." },
+        { "id": 83, "title": "Phép tính nào có kết quả bé hơn?", "equation": "So sánh (6 - 2) và (8 - 3)", "options": ["6 - 2", "8 - 3", "Bằng nhau", "Không rõ"], "correctAnswer": "6 - 2", "explanation": "6 - 2 = 4 bé hơn 8 - 3 = 5." },
+        { "id": 84, "title": "Phép tính nào cho kết quả bằng 6?", "equation": "Tìm phép tính đúng", "options": ["2 + 3", "3 + 3", "4 + 1", "5 + 2"], "correctAnswer": "3 + 3", "explanation": "3 + 3 = 6." },
+        { "id": 85, "title": "Phép tính nào cho kết quả bằng 4?", "equation": "Tìm phép tính đúng", "options": ["7 - 2", "9 - 5", "6 - 1", "8 - 2"], "correctAnswer": "9 - 5", "explanation": "9 - 5 = 4." },
+        { "id": 86, "title": "Phép tính nào lớn nhất?", "equation": "So sánh: 2+2, 3+3, 1+1", "options": ["2 + 2", "3 + 3", "1 + 1", "Bằng nhau"], "correctAnswer": "3 + 3", "explanation": "3 + 3 = 6 là lớn nhất." },
+        { "id": 87, "title": "Phép tính nào bé nhất?", "equation": "So sánh: 5-2, 4-3, 6-4", "options": ["5 - 2", "4 - 3", "6 - 4", "Lớn như nhau"], "correctAnswer": "4 - 3", "explanation": "4 - 3 = 1 là bé nhất." },
+        { "id": 88, "title": "Điền dấu thích hợp:", "equation": "(2 + 3) ... (6 - 1)", "options": [">", "<", "=", "Không rõ"], "correctAnswer": "=", "explanation": "2 + 3 = 5 và 6 - 1 = 5 (Bằng nhau)." },
+        { "id": 89, "title": "Điền dấu thích hợp:", "equation": "(7 - 2) ... (1 + 3)", "options": [">", "<", "=", "Không rõ"], "correctAnswer": ">", "explanation": "7 - 2 = 5 lớn hơn 1 + 3 = 4." },
+        { "id": 90, "title": "Điền dấu thích hợp:", "equation": "(3 + 4) ... (10 - 2)", "options": [">", "<", "=", "Không rõ"], "correctAnswer": "<", "explanation": "3 + 4 = 7 bé hơn 10 - 2 = 8." }
+      ]
+    },
+    {
+      "id": "lesson-10",
+      "title": "Bài 10: Thử thách thông minh xuất sắc",
+      "questions": [
+        { "id": 91, "title": "Số tròn chục đầu tiên là số mấy?", "equation": "Hỏi số tròn chục nhỏ nhất > 0", "options": ["5", "10", "20", "100"], "correctAnswer": "10", "explanation": "Số 10 là số tròn chục đầu tiên." },
+        { "id": 92, "title": "Tính nhanh kết quả:", "equation": "10 - 5 + 3 = ?", "options": ["6", "7", "8", "9"], "correctAnswer": "8", "explanation": "10 - 5 = 5, rồi 5 + 3 = 8." },
+        { "id": 93, "title": "Tìm x biết: x + 2 = 5", "equation": "x = ?", "options": ["1", "2", "3", "4"], "correctAnswer": "3", "explanation": "3 cộng 2 bằng 5." },
+        { "id": 94, "title": "Tìm x biết: 7 - x = 4", "equation": "x = ?", "options": ["1", "2", "3", "4"], "correctAnswer": "3", "explanation": "7 bớt 3 còn 4." },
+        { "id": 95, "title": "Mẹ có 10 cái bánh, chia đều cho 2 anh em mỗi người mấy cái?", "equation": "10 chia đôi = ?", "options": ["3", "4", "5", "6"], "correctAnswer": "5", "explanation": "10 tách đôi mỗi phần là 5." },
+        { "id": 96, "title": "Số liền sau của số 7 là số mấy?", "equation": "Số liền sau số 7", "options": ["6", "7", "8", "9"], "correctAnswer": "8", "explanation": "Số liền sau 7 là 8." },
+        { "id": 97, "title": "Số liền trước của số 9 là số mấy?", "equation": "Số liền trước số 9", "options": ["7", "8", "9", "10"], "correctAnswer": "8", "explanation": "Số liền trước 9 là 8." },
+        { "id": 98, "title": "Tổng của số lớn nhất có 1 chữ số với 0 là?", "equation": "9 + 0 = ?", "options": ["0", "9", "10", "1"], "correctAnswer": "9", "explanation": "Số lớn nhất có 1 chữ số là 9, cộng 0 vẫn bằng 9." },
+        { "id": 99, "title": "Hiệu của số 10 với chính nó bằng mấy?", "equation": "10 - 10 = ?", "options": ["0", "1", "10", "20"], "correctAnswer": "0", "explanation": "Số trừ đi chính nó luôn bằng 0." },
+        { "id": 100, "title": "Thử thách cuối cùng: 4 + 4 - 4 + 4 = ?", "equation": "Tính giá trị chuỗi", "options": ["4", "8", "12", "0"], "correctAnswer": "8", "explanation": "4+4=8, 8-4=4, rồi 4+4=8." }
+      ]
+    }
+  ]
+}

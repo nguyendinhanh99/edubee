@@ -1,0 +1,186 @@
+{
+  "topicId": "numbers",
+  "topicName": "🔢 Làm quen với số & Đếm",
+  "flashcards": [
+    {
+      "id": 1,
+      "number": "1",
+      "title": "Số Một",
+      "icon": "🎈",
+      "description": "Một quả bóng bay lơ lửng trên trời cao.",
+      "countText": "1 quả bóng",
+      "questionText": "Có bao nhiêu quả bóng bay?"
+    },
+    {
+      "id": 2,
+      "number": "2",
+      "title": "Số Hai",
+      "icon": "🦆🦆",
+      "description": "Hai chú vịt con đang bơi lội dưới ao.",
+      "countText": "2 chú vịt",
+      "questionText": "Có bao nhiêu chú vịt con?"
+    },
+    {
+      "id": 3,
+      "number": "3",
+      "title": "Số Ba",
+      "icon": "⭐⭐⭐",
+      "description": "Ba ngôi sao lấp lánh trên bầu trời đêm.",
+      "countText": "3 ngôi sao",
+      "questionText": "Có bao nhiêu ngôi sao lấp lánh?"
+    },
+    {
+      "id": 4,
+      "number": "4",
+      "title": "Số Bốn",
+      "icon": "🍎🍎🍎🍎",
+      "description": "Bốn quả táo đỏ mọng trên cành cây.",
+      "countText": "4 quả táo",
+      "questionText": "Có bao nhiêu quả táo đỏ?"
+    },
+    {
+      "id": 5,
+      "number": "5",
+      "title": "Số Năm",
+      "icon": "🐰🐰🐰🐰🐰",
+      "description": "Năm chú thỏ nhảy nhót vui đùa.",
+      "countText": "5 chú thỏ",
+      "questionText": "Có bao nhiêu chú thỏ đáng yêu?"
+    },
+    {
+      "id": 6,
+      "number": "6",
+      "title": "Số Sáu",
+      "icon": "🐟🐟🐟🐟🐟🐟",
+      "description": "Sáu chú cá nhỏ bơi lội tung tăng trong hồ.",
+      "countText": "6 chú cá",
+      "questionText": "Có bao nhiêu chú cá nhỏ?"
+    },
+    {
+      "id": 7,
+      "number": "7",
+      "title": "Số Bảy",
+      "icon": "🌸🌸🌸🌸🌸🌸🌸",
+      "description": "Bảy bông hoa nở rộ khoe sắc thắm.",
+      "countText": "7 bông hoa",
+      "questionText": "Có bao nhiêu bông hoa nở?"
+    },
+    {
+      "id": 8,
+      "number": "8",
+      "title": "Số Tám",
+      "icon": "🍬🍬🍬🍬🍬🍬🍬🍬",
+      "description": "Tám chiếc kẹo ngọt ngào thơm ngon.",
+      "countText": "8 chiếc kẹo",
+      "questionText": "Có bao nhiêu chiếc kẹo ngọt?"
+    },
+    {
+      "id": 9,
+      "number": "9",
+      "title": "Số Chín",
+      "icon": "🦋🦋🦋🦋🦋🦋🦋🦋🦋",
+      "description": "Chín chú bướm rực rỡ đậu trên khóm cây.",
+      "countText": "9 chú bướm",
+      "questionText": "Có bao nhiêu chú bướm rực rỡ?"
+    },
+    {
+      "id": 10,
+      "number": "10",
+      "title": "Số Mười",
+      "icon": "🚗🚗🚗🚗🚗🚗🚗🚗🚗🚗",
+      "description": "Mười chiếc ô tô đầy màu sắc trên đường phố.",
+      "countText": "10 chiếc ô tô",
+      "questionText": "Có bao nhiêu chiếc ô tô?"
+    },
+    {
+      "id": 11,
+      "number": "11",
+      "title": "Số Mười Một",
+      "icon": "⚽⚽⚽⚽⚽⚽⚽⚽⚽⚽⚽",
+      "description": "Mười một quả bóng đá trên sân cỏ.",
+      "countText": "11 quả bóng",
+      "questionText": "Có bao nhiêu quả bóng đá?"
+    },
+    {
+      "id": 12,
+      "number": "12",
+      "title": "Số Mười Hai",
+      "icon": "🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱",
+      "description": "Mười hai chú mèo con đang ngủ ngoan.",
+      "countText": "12 chú mèo",
+      "questionText": "Có bao nhiêu chú mèo con?"
+    },
+    {
+      "id": 13,
+      "number": "13",
+      "title": "Số Mười Ba",
+      "icon": "🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓",
+      "description": "Mười ba quả dâu tây chín mọng.",
+      "countText": "13 quả dâu",
+      "questionText": "Có bao nhiêu quả dâu tây?"
+    },
+    {
+      "id": 14,
+      "number": "14",
+      "title": "Số Mười Bốn",
+      "icon": "🐧🐧🐧🐧🐧🐧🐧🐧🐧🐧🐧🐧🐧🐧",
+      "description": "Mười bốn chú chim cánh cụt đi dạo trên băng.",
+      "countText": "14 chú chim cánh cụt",
+      "questionText": "Có bao nhiêu chú chim cánh cụt?"
+    },
+    {
+      "id": 15,
+      "number": "15",
+      "title": "Số Mười Lăm",
+      "icon": "🍦🍦🍦🍦🍦🍦🍦🍦🍦🍦🍦🍦🍦🍦🍦",
+      "description": "Mười lăm cây kem mát lạnh.",
+      "countText": "15 cây kem",
+      "questionText": "Có bao nhiêu cây kem mát lạnh?"
+    },
+    {
+      "id": 16,
+      "number": "16",
+      "title": "Số Mười Sáu",
+      "icon": "🐢🐢🐢🐢🐢🐢🐢🐢🐢🐢🐢🐢🐢🐢🐢🐢",
+      "description": "Mười sáu chú rùa chậm rãi bò.",
+      "countText": "16 chú rùa",
+      "questionText": "Có bao nhiêu chú rùa?"
+    },
+    {
+      "id": 17,
+      "number": "17",
+      "title": "Số Mười Bảy",
+      "icon": "🌻🌻🌻🌻🌻🌻🌻🌻🌻🌻🌻🌻🌻🌻🌻🌻🌻",
+      "description": "Mười bảy bông hoa hướng dương hướng về mặt trời.",
+      "countText": "17 bông hoa hướng dương",
+      "questionText": "Có bao nhiêu bông hoa hướng dương?"
+    },
+    {
+      "id": 18,
+      "number": "18",
+      "title": "Số Mười Tám",
+      "icon": "🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈",
+      "description": "Mười tám quả bóng bay rực rỡ sắc màu.",
+      "countText": "18 quả bóng",
+      "questionText": "Có bao nhiêu quả bóng bay màu sắc?"
+    },
+    {
+      "id": 19,
+      "number": "19",
+      "title": "Số Mười Chín",
+      "icon": "⭐The⭐star⭐is⭐bright⭐",
+      "description": "Mười chín ngôi sao tỏa sáng trong đêm.",
+      "countText": "19 ngôi sao",
+      "questionText": "Có bao nhiêu ngôi sao tỏa sáng?"
+    },
+    {
+      "id": 20,
+      "number": "20",
+      "title": "Số Hai Mươi",
+      "icon": "🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁",
+      "description": "Hai mươi hộp quà bất ngờ cho các bé.",
+      "countText": "20 hộp quà",
+      "questionText": "Có bao nhiêu hộp quà bất ngờ?"
+    }
+  ]
+}

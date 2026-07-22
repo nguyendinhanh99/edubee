@@ -1,0 +1,96 @@
+{
+  "topicId": "subtraction",
+  "topicName": "➖ Phép trừ trực quan",
+  "flashcards": [
+    {
+      "id": 1,
+      "equation": "2 - 1 = 1",
+      "title": "Hai trừ một bằng một",
+      "icon": "🍎🍎 ➖ 🍎 ➔ 🍎",
+      "description": "Có hai quả táo, ăn đi một quả còn lại một quả.",
+      "countText": "2 trừ 1 bằng 1",
+      "questionText": "Hai trừ một bằng mấy?"
+    },
+    {
+      "id": 2,
+      "equation": "3 - 1 = 2",
+      "title": "Ba trừ một bằng hai",
+      "icon": "🦆🦆🦆 ➖ 🦆 ➔ 🦆🦆",
+      "description": "Ba chú vịt đang bơi, một chú vịt đi lên bờ.",
+      "countText": "3 trừ 1 bằng 2",
+      "questionText": "Ba trừ một bằng mấy?"
+    },
+    {
+      "id": 3,
+      "equation": "3 - 2 = 1",
+      "title": "Ba trừ hai bằng một",
+      "icon": "⭐⭐⭐ ➖ ⭐⭐ ➔ ⭐",
+      "description": "Ba ngôi sao sáng, tắt đi hai ngôi sao.",
+      "countText": "3 trừ 2 bằng 1",
+      "questionText": "Ba trừ hai bằng mấy?"
+    },
+    {
+      "id": 4,
+      "equation": "4 - 2 = 2",
+      "title": "Bốn trừ hai bằng hai",
+      "icon": "🐰🐰🐰🐰 ➖ 🐰🐰 ➔ 🐰🐰",
+      "description": "Bốn chú thỏ đang chơi, hai chú thỏ chạy đi mất.",
+      "countText": "4 trừ 2 bằng 2",
+      "questionText": "Bốn trừ hai bằng mấy?"
+    },
+    {
+      "id": 5,
+      "equation": "5 - 2 = 3",
+      "title": "Năm trừ hai bằng ba",
+      "icon": "🍬🍬🍬🍬🍬 ➖ 🍬🍬 ➔ 🍬🍬🍬",
+      "description": "Năm chiếc kẹo, cho bạn hai chiếc kẹo.",
+      "countText": "5 trừ 2 bằng 3",
+      "questionText": "Năm trừ hai bằng mấy?"
+    },
+    {
+      "id": 6,
+      "equation": "5 - 3 = 2",
+      "title": "Năm trừ ba bằng hai",
+      "icon": "🐟🐟🐟🐟🐟 ➖ 🐟🐟🐟 ➔ 🐟🐟",
+      "description": "Năm chú cá bơi lội, ba chú cá bơi đi chỗ khác.",
+      "countText": "5 trừ 3 bằng 2",
+      "questionText": "Năm trừ ba bằng mấy?"
+    },
+    {
+      "id": 7,
+      "equation": "6 - 3 = 3",
+      "title": "Sáu trừ ba bằng ba",
+      "icon": "🌸🌸🌸🌸🌸🌸 ➖ 🌸🌸🌸 ➔ 🌸🌸🌸",
+      "description": "Sáu bông hoa, hái đi ba bông hoa.",
+      "countText": "6 trừ 3 bằng 3",
+      "questionText": "Sáu trừ ba bằng mấy?"
+    },
+    {
+      "id": 8,
+      "equation": "7 - 4 = 3",
+      "title": "Bảy trừ bốn bằng ba",
+      "icon": "🚗🚗🚗🚗🚗🚗🚗 ➖ 🚗🚗🚗🚗 ➔ 🚗🚗🚗",
+      "description": "Bảy chiếc ô tô, bốn chiếc xe chạy về bến.",
+      "countText": "7 trừ 4 bằng 3",
+      "questionText": "Bảy trừ bốn bằng mấy?"
+    },
+    {
+      "id": 9,
+      "equation": "8 - 4 = 4",
+      "title": "Tám trừ bốn bằng bốn",
+      "icon": "🐧🐧🐧🐧🐧🐧🐧🐧 ➖ 🐧🐧🐧🐧 ➔ 🐧🐧🐧🐧",
+      "description": "Tám chú chim cánh cụt, bốn chú đi ngủ trước.",
+      "countText": "8 trừ 4 bằng 4",
+      "questionText": "Tám trừ bốn bằng mấy?"
+    },
+    {
+      "id": 10,
+      "equation": "10 - 5 = 5",
+      "title": "Mười trừ năm bằng năm",
+      "icon": "🍦🍦🍦🍦🍦🍦🍦🍦🍦🍦 ➖ 🍦🍦🍦🍦🍦 ➔ 🍦🍦🍦🍦🍦",
+      "description": "Mười cây kem ngon tuyệt, ăn hết năm cây.",
+      "countText": "10 trừ 5 bằng 5",
+      "questionText": "Mười trừ năm bằng mấy?"
+    }
+  ]
+}

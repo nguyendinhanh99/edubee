@@ -1,0 +1,150 @@
+{
+  "topicId": "addition",
+  "topicName": "➕ Phép cộng vui nhộn (Phạm vi 10)",
+  "flashcards": [
+    {
+      "id": 1,
+      "equation": "1 + 1 = 2",
+      "title": "Một cộng một bằng hai",
+      "icon": "🍎 + 🍎 = 🍎🍎",
+      "description": "Một quả táo cộng thêm một quả táo thành hai quả táo.",
+      "countText": "1 cộng 1 bằng 2",
+      "questionText": "Một cộng một bằng mấy?"
+    },
+    {
+      "id": 2,
+      "equation": "2 + 1 = 3",
+      "title": "Hai cộng một bằng ba",
+      "icon": "🦆🦆 + 🦆 = 🦆🦆🦆",
+      "description": "Hai chú vịt đang bơi, có thêm một chú vịt bơi đến.",
+      "countText": "2 cộng 1 bằng 3",
+      "questionText": "Hai cộng một bằng mấy?"
+    },
+    {
+      "id": 3,
+      "equation": "2 + 2 = 4",
+      "title": "Hai cộng hai bằng bốn",
+      "icon": "⭐⭐ + ⭐⭐ = ⭐⭐⭐⭐",
+      "description": "Hai ngôi sao sáng cộng thêm hai ngôi sao sáng.",
+      "countText": "2 cộng 2 bằng 4",
+      "questionText": "Hai cộng hai bằng mấy?"
+    },
+    {
+      "id": 4,
+      "equation": "3 + 1 = 4",
+      "title": "Ba cộng một bằng bốn",
+      "icon": "🎈🎈🎈 + 🎈 = 🎈🎈🎈🎈",
+      "description": "Ba quả bóng bay, có thêm một quả bóng bay lên.",
+      "countText": "3 cộng 1 bằng 4",
+      "questionText": "Ba cộng một bằng mấy?"
+    },
+    {
+      "id": 5,
+      "equation": "3 + 2 = 5",
+      "title": "Ba cộng hai bằng năm",
+      "icon": "🐰🐰🐰 + 🐰🐰 = 🐰🐰🐰🐰🐰",
+      "description": "Ba chú thỏ đang chơi đùa, có thêm hai chú thỏ nhảy tới.",
+      "countText": "3 cộng 2 bằng 5",
+      "questionText": "Ba cộng hai bằng mấy?"
+    },
+    {
+      "id": 6,
+      "equation": "4 + 1 = 5",
+      "title": "Bốn cộng một bằng năm",
+      "icon": "🍬🍬🍬🍬 + 🍬 = 🍬🍬🍬🍬🍬",
+      "description": "Bốn chiếc kẹo thêm một chiếc kẹo nữa.",
+      "countText": "4 cộng 1 bằng 5",
+      "questionText": "Bốn cộng một bằng mấy?"
+    },
+    {
+      "id": 7,
+      "equation": "3 + 3 = 6",
+      "title": "Ba cộng ba bằng sáu",
+      "icon": "🐟🐟🐟 + 🐟🐟🐟 = 🐟🐟🐟🐟🐟🐟",
+      "description": "Ba chú cá vàng kết hợp với ba chú cá xanh.",
+      "countText": "3 cộng 3 bằng 6",
+      "questionText": "Ba cộng ba bằng mấy?"
+    },
+    {
+      "id": 8,
+      "equation": "4 + 2 = 6",
+      "title": "Bốn cộng hai bằng sáu",
+      "icon": "🌸🌸🌸🌸 + 🌸🌸 = 🌸🌸🌸🌸🌸🌸",
+      "description": "Bốn bông hoa nở và hai bông hoa mới nhú.",
+      "countText": "4 cộng 2 bằng 6",
+      "questionText": "Bốn cộng hai bằng mấy?"
+    },
+    {
+      "id": 9,
+      "equation": "5 + 2 = 7",
+      "title": "Năm cộng hai bằng bảy",
+      "icon": "🚗🚗🚗🚗🚗 + 🚗🚗 = 🚗🚗🚗🚗🚗🚗🚗",
+      "description": "Năm ô tô đỏ và hai ô tô xanh trên đường đua.",
+      "countText": "5 cộng 2 bằng 7",
+      "questionText": "Năm cộng hai bằng mấy?"
+    },
+    {
+      "id": 10,
+      "equation": "4 + 3 = 7",
+      "title": "Bốn cộng ba bằng bảy",
+      "icon": "🐧🐧🐧🐧 + 🐧🐧🐧 = 🐧🐧🐧🐧🐧🐧🐧",
+      "description": "Bốn chú chim cánh cụt gặp thêm ba người bạn.",
+      "countText": "4 cộng 3 bằng 7",
+      "questionText": "Bốn cộng ba bằng mấy?"
+    },
+    {
+      "id": 11,
+      "equation": "4 + 4 = 8",
+      "title": "Bốn cộng bốn bằng tám",
+      "icon": "🍦🍦🍦🍦 + 🍦🍦🍦🍦 = 🍦🍦🍦🍦🍦🍦🍦🍦",
+      "description": "Bốn cây kem vani và bốn cây kem socola.",
+      "countText": "4 cộng 4 bằng 8",
+      "questionText": "Bốn cộng bốn bằng mấy?"
+    },
+    {
+      "id": 12,
+      "equation": "5 + 3 = 8",
+      "title": "Năm cộng ba bằng tám",
+      "icon": "⚽⚽⚽⚽⚽ + ⚽⚽⚽ = ⚽⚽⚽⚽⚽⚽⚽⚽",
+      "description": "Năm quả bóng và ba quả bóng trên sân.",
+      "countText": "5 cộng 3 bằng 8",
+      "questionText": "Năm cộng ba bằng mấy?"
+    },
+    {
+      "id": 13,
+      "equation": "5 + 4 = 9",
+      "title": "Năm cộng bốn bằng chín",
+      "icon": "🐱🐱🐱🐱🐱 + 🐱🐱🐱🐱 = 🐱🐱🐱🐱🐱🐱🐱🐱🐱",
+      "description": "Năm chú mèo lớn và bốn chú mèo con.",
+      "countText": "5 cộng 4 bằng 9",
+      "questionText": "Năm cộng bốn bằng mấy?"
+    },
+    {
+      "id": 14,
+      "equation": "6 + 3 = 9",
+      "title": "Sáu cộng ba bằng chín",
+      "icon": "🍓🍓🍓🍓🍓🍓 + 🍓🍓🍓 = 🍓🍓🍓🍓🍓🍓🍓🍓🍓",
+      "description": "Sáu quả dâu tây và ba quả dâu tây chín mọng.",
+      "countText": "6 cộng 3 bằng 9",
+      "questionText": "Sáu cộng ba bằng mấy?"
+    },
+    {
+      "id": 15,
+      "equation": "5 + 5 = 10",
+      "title": "Năm cộng năm bằng mười",
+      "icon": "🎈🎈🎈🎈🎈 + 🎈🎈🎈🎈🎈 = 🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈",
+      "description": "Năm quả bóng bay đỏ và năm quả bóng bay xanh.",
+      "countText": "5 cộng 5 bằng 10",
+      "questionText": "Năm cộng năm bằng mấy?"
+    },
+    {
+      "id": 16,
+      "equation": "6 + 4 = 10",
+      "title": "Sáu cộng bốn bằng mười",
+      "icon": "⭐⭐⭐⭐⭐⭐ + ⭐⭐⭐⭐ = ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐",
+      "description": "Sáu ngôi sao vàng và bốn ngôi sao lấp lánh.",
+      "countText": "6 cộng 4 bằng 10",
+      "questionText": "Sáu cộng bốn bằng mấy?"
+    }
+  ]
+}

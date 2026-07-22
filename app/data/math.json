@@ -1,0 +1,18 @@
+{
+  "title": "Đếm số cùng các loài vật",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Bé hãy đếm xem có bao nhiêu chú thỏ đáng yêu đang nhảy?",
+      "score": 10,
+      "options": [
+        { "id": "opt1", "name": "2 chú thỏ", "icon": "🐇🐇", "isCorrect": false },
+        { "id": "opt2", "name": "3 chú thỏ", "icon": "🐇🐇🐇", "isCorrect": true },
+        { "id": "opt3", "name": "4 chú thỏ", "icon": "🐇🐇🐇🐇", "isCorrect": false },
+        { "id": "opt4", "name": "5 chú thỏ", "icon": "🐇🐇🐇🐇🐇", "isCorrect": false }
+      ],
+      "correctFeedback": { "knowledge": "Tuyệt vời! Bé đếm rất chuẩn: 1, 2, 3 chú thỏ." },
+      "incorrectFeedback": { "knowledge": "Chưa chính xác rồi, bé hãy đếm lại thật chậm cùng edubee nhé!" }
+    }
+  ]
+}

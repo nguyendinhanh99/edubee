@@ -1,0 +1,86 @@
+{
+  "topicId": "math_quiz",
+  "topicName": "🎮 Thử thách Toán học 50 Cấp độ",
+  "levels": [
+    {
+      "levelId": 1,
+      "levelName": "Cấp độ 1: Làm quen phạm vi 10 (Dễ)",
+      "questions": [
+        { "id": 1, "title": "Một cộng một bằng mấy?", "equation": "1 + 1 = ?", "options": ["1", "2", "3", "4"], "correctAnswer": "2", "explanation": "1 + 1 = 2" },
+        { "id": 2, "title": "Hai trừ một bằng mấy?", "equation": "2 - 1 = ?", "options": ["1", "2", "3", "4"], "correctAnswer": "1", "explanation": "2 - 1 = 1" },
+        { "id": 3, "title": "Hai cộng hai bằng mấy?", "equation": "2 + 2 = ?", "options": ["3", "4", "5", "6"], "correctAnswer": "4", "explanation": "2 + 2 = 4" },
+        { "id": 4, "title": "Ba trừ một bằng mấy?", "equation": "3 - 1 = ?", "options": ["1", "2", "3", "4"], "correctAnswer": "2", "explanation": "3 - 1 = 2" },
+        { "id": 5, "title": "Ba cộng hai bằng mấy?", "equation": "3 + 2 = ?", "options": ["4", "5", "6", "7"], "correctAnswer": "5", "explanation": "3 + 2 = 5" },
+        { "id": 6, "title": "Bốn trừ hai bằng mấy?", "equation": "4 - 2 = ?", "options": ["1", "2", "3", "4"], "correctAnswer": "2", "explanation": "4 - 2 = 2" },
+        { "id": 7, "title": "Ba cộng ba bằng mấy?", "equation": "3 + 3 = ?", "options": ["5", "6", "7", "8"], "correctAnswer": "6", "explanation": "3 + 3 = 6" },
+        { "id": 8, "title": "Năm trừ ba bằng mấy?", "equation": "5 - 3 = ?", "options": ["1", "2", "3", "4"], "correctAnswer": "2", "explanation": "5 - 3 = 2" },
+        { "id": 9, "title": "Bốn cộng bốn bằng mấy?", "equation": "4 + 4 = ?", "options": ["6", "7", "8", "9"], "correctAnswer": "8", "explanation": "4 + 4 = 8" },
+        { "id": 10, "title": "Năm trừ hai bằng mấy?", "equation": "5 - 2 = ?", "options": ["1", "2", "3", "4"], "correctAnswer": "3", "explanation": "5 - 2 = 3" }
+      ]
+    },
+    {
+      "levelId": 2,
+      "levelName": "Cấp độ 2: Phạm vi từ 10 đến 20 (Trung bình)",
+      "questions": [
+        { "id": 11, "title": "Sáu cộng bốn bằng mấy?", "equation": "6 + 4 = ?", "options": ["8", "9", "10", "11"], "correctAnswer": "10", "explanation": "6 + 4 = 10" },
+        { "id": 12, "title": "Tám trừ bốn bằng mấy?", "equation": "8 - 4 = ?", "options": ["2", "3", "4", "5"], "correctAnswer": "4", "explanation": "8 - 4 = 4" },
+        { "id": 13, "title": "Năm cộng năm bằng mấy?", "equation": "5 + 5 = ?", "options": ["8", "9", "10", "11"], "correctAnswer": "10", "explanation": "5 + 5 = 10" },
+        { "id": 14, "title": "Mười trừ năm bằng mấy?", "equation": "10 - 5 = ?", "options": ["3", "4", "5", "6"], "correctAnswer": "5", "explanation": "10 - 5 = 5" },
+        { "id": 15, "title": "Bảy cộng năm bằng mấy?", "equation": "7 + 5 = ?", "options": ["10", "11", "12", "13"], "correctAnswer": "12", "explanation": "7 + 5 = 12" },
+        { "id": 16, "title": "Mười hai trừ bốn bằng mấy?", "equation": "12 - 4 = ?", "options": ["7", "8", "9", "10"], "correctAnswer": "8", "explanation": "12 - 4 = 8" },
+        { "id": 17, "title": "Tám cộng sáu bằng mấy?", "equation": "8 + 6 = ?", "options": ["12", "13", "14", "15"], "correctAnswer": "14", "explanation": "8 + 6 = 14" },
+        { "id": 18, "title": "Mười lăm trừ bảy bằng mấy?", "equation": "15 - 7 = ?", "options": ["6", "7", "8", "9"], "correctAnswer": "8", "explanation": "15 - 7 = 8" },
+        { "id": 19, "title": "Chín cộng chín bằng mấy?", "equation": "9 + 9 = ?", "options": ["16", "17", "18", "19"], "correctAnswer": "18", "explanation": "9 + 9 = 18" },
+        { "id": 20, "title": "Hai mươi trừ mười bằng mấy?", "equation": "20 - 10 = ?", "options": ["5", "10", "15", "20"], "correctAnswer": "10", "explanation": "20 - 10 = 10" }
+      ]
+    },
+    {
+      "levelId": 3,
+      "levelName": "Cấp độ 3: Số tròn chục và số lớn (Khó)",
+      "questions": [
+        { "id": 21, "title": "Mười cộng hai mươi bằng mấy?", "equation": "10 + 20 = ?", "options": ["20", "30", "40", "50"], "correctAnswer": "30", "explanation": "1 chục + 2 chục = 3 chục (30)" },
+        { "id": 22, "title": "Năm mươi trừ hai mươi bằng mấy?", "equation": "50 - 20 = ?", "options": ["20", "30", "40", "60"], "correctAnswer": "30", "explanation": "5 chục - 2 chục = 3 chục (30)" },
+        { "id": 23, "title": "Ba mươi cộng bốn mươi bằng mấy?", "equation": "30 + 40 = ?", "options": ["60", "70", "80", "90"], "correctAnswer": "70", "explanation": "3 chục + 4 chục = 7 chục (70)" },
+        { "id": 24, "title": "Tám mươi trừ ba mươi bằng mấy?", "equation": "80 - 30 = ?", "options": ["40", "50", "60", "70"], "correctAnswer": "50", "explanation": "8 chục - 3 chục = 5 chục (50)" },
+        { "id": 25, "title": "Hai mươi cộng ba mươi bằng mấy?", "equation": "20 + 30 = ?", "options": ["40", "50", "60", "70"], "correctAnswer": "50", "explanation": "2 chục + 3 chục = 5 chục (50)" },
+        { "id": 26, "title": "Sáu mươi trừ mười bằng mấy?", "equation": "60 - 10 = ?", "options": ["40", "50", "60", "70"], "correctAnswer": "50", "explanation": "6 chục - 1 chục = 5 chục (50)" },
+        { "id": 27, "title": "Bốn mươi cộng bốn mươi bằng mấy?", "equation": "40 + 40 = ?", "options": ["60", "70", "80", "90"], "correctAnswer": "80", "explanation": "4 chục + 4 chục = 8 chục (80)" },
+        { "id": 28, "title": "Chín mươi trừ năm mươi bằng mấy?", "equation": "90 - 50 = ?", "options": ["30", "40", "50", "60"], "correctAnswer": "40", "explanation": "9 chục - 5 chục = 4 chục (40)" },
+        { "id": 29, "title": "Năm mươi cộng năm mươi bằng mấy?", "equation": "50 + 50 = ?", "options": ["80", "90", "100", "110"], "correctAnswer": "100", "explanation": "5 chục + 5 chục = 100" },
+        { "id": 30, "title": "Một trăm trừ sáu mươi bằng mấy?", "equation": "100 - 60 = ?", "options": ["30", "40", "50", "60"], "correctAnswer": "40", "explanation": "100 - 60 = 40" }
+      ]
+    },
+    {
+      "levelId": 4,
+      "levelName": "Cấp độ 4: Cộng trừ nâng cao số lớn (Siêu khó)",
+      "questions": [
+        { "id": 31, "title": "Hai mươi lăm cộng năm bằng mấy?", "equation": "25 + 5 = ?", "options": ["20", "28", "30", "35"], "correctAnswer": "30", "explanation": "25 + 5 = 30" },
+        { "id": 32, "title": "Bốn mươi trừ mười lăm bằng mấy?", "equation": "40 - 15 = ?", "options": ["20", "25", "30", "35"], "correctAnswer": "25", "explanation": "40 - 15 = 25" },
+        { "id": 33, "title": "Ba mươi lăm cộng mười bằng mấy?", "equation": "35 + 10 = ?", "options": ["40", "45", "50", "55"], "correctAnswer": "45", "explanation": "35 + 10 = 45" },
+        { "id": 34, "title": "Năm mươi trừ hai mươi lăm bằng mấy?", "equation": "50 - 25 = ?", "options": ["15", "20", "25", "30"], "correctAnswer": "25", "explanation": "50 - 25 = 25" },
+        { "id": 35, "title": "Sáu mươi cộng mười lăm bằng mấy?", "equation": "60 + 15 = ?", "options": ["70", "75", "80", "85"], "correctAnswer": "75", "explanation": "60 + 15 = 75" },
+        { "id": 36, "title": "Tám mươi trừ ba mươi lăm bằng mấy?", "equation": "80 - 35 = ?", "options": ["35", "40", "45", "50"], "correctAnswer": "45", "explanation": "80 - 35 = 45" },
+        { "id": 37, "title": "Hai mươi hai cộng mười tám bằng mấy?", "equation": "22 + 18 = ?", "options": ["30", "35", "40", "45"], "correctAnswer": "40", "explanation": "22 + 18 = 40" },
+        { "id": 38, "title": "Năm mươi bốn trừ mười bốn bằng mấy?", "equation": "54 - 14 = ?", "options": ["30", "40", "45", "50"], "correctAnswer": "40", "explanation": "54 - 14 = 40" },
+        { "id": 39, "title": "Bốn mươi lăm cộng hai mươi lăm bằng mấy?", "equation": "45 + 25 = ?", "options": ["60", "65", "70", "75"], "correctAnswer": "70", "explanation": "45 + 25 = 70" },
+        { "id": 40, "title": "Chín mươi trừ sáu mươi lăm bằng mấy?", "equation": "90 - 65 = ?", "options": ["15", "20", "25", "30"], "correctAnswer": "25", "explanation": "90 - 65 = 25" }
+      ]
+    },
+    {
+      "levelId": 5,
+      "levelName": "Cấp độ 5: Siêu sao Toán học đỉnh cao (Bậc thầy)",
+      "questions": [
+        { "id": 41, "title": "Sáu mươi cộng ba mươi bằng mấy?", "equation": "60 + 30 = ?", "options": ["70", "80", "90", "100"], "correctAnswer": "90", "explanation": "6 chục + 3 chục = 9 chục (90)" },
+        { "id": 42, "title": "Một trăm trừ năm mươi bằng mấy?", "equation": "100 - 50 = ?", "options": ["40", "50", "60", "70"], "correctAnswer": "50", "explanation": "100 - 50 = 50" },
+        { "id": 43, "title": "Bảy mươi cộng hai mươi bằng mấy?", "equation": "70 + 20 = ?", "options": ["80", "90", "100", "110"], "correctAnswer": "90", "explanation": "7 chục + 2 chục = 9 chục (90)" },
+        { "id": 44, "title": "Chín mươi trừ bốn mươi bằng mấy?", "equation": "90 - 40 = ?", "options": ["40", "50", "60", "70"], "correctAnswer": "50", "explanation": "9 chục - 4 chục = 5 chục (50)" },
+        { "id": 45, "title": "Hai mươi lăm cộng bảy mươi lăm bằng mấy?", "equation": "25 + 75 = ?", "options": ["90", "95", "100", "110"], "correctAnswer": "100", "explanation": "25 + 75 = 100" },
+        { "id": 46, "title": "Một trăm trừ hai mươi lăm bằng mấy?", "equation": "100 - 25 = ?", "options": ["65", "70", "75", "80"], "correctAnswer": "75", "explanation": "100 - 25 = 75" },
+        { "id": 47, "title": "Bốn mươi lăm cộng năm mươi lăm bằng mấy?", "equation": "45 + 55 = ?", "options": ["90", "95", "100", "105"], "correctAnswer": "100", "explanation": "45 + 55 = 100" },
+        { "id": 48, "title": "Tám mươi lăm trừ ba mươi lăm bằng mấy?", "equation": "85 - 35 = ?", "options": ["40", "45", "50", "55"], "correctAnswer": "50", "explanation": "85 - 35 = 50" },
+        { "id": 49, "title": "Sáu mươi lăm cộng ba mươi lăm bằng mấy?", "equation": "65 + 35 = ?", "options": ["90", "95", "100", "105"], "correctAnswer": "100", "explanation": "65 + 35 = 100" },
+        { "id": 50, "title": "Một trăm trừ chín mươi bằng mấy?", "equation": "100 - 90 = ?", "options": ["5", "10", "15", "20"], "correctAnswer": "10", "explanation": "100 - 90 = 10" }
+      ]
+    }
+  ]
+}
