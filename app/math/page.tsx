@@ -153,11 +153,11 @@ export default function MathTopicsPage() {
       {/* Header */}
       <div className="w-full max-w-4xl flex items-center justify-between mb-8">
         <Link 
-          href="/"
+          href="/home"
           className="flex items-center space-x-2 bg-white px-4 py-2 rounded-2xl shadow-sm text-gray-700 font-semibold hover:bg-gray-50 transition"
         >
           <span>🏠</span>
-          <span>Trang chủ</span>
+          <span>Quay lại</span>
         </Link>
         <div className="text-center">
           <h1 className="text-3xl font-extrabold text-purple-900">

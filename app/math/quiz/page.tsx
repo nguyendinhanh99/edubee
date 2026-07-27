@@ -11,7 +11,7 @@ interface WrongQuestion {
   selectedOption: string;
   correctAnswer: string;
   explanation: string;
-  lessonTitle: string; // Đã đổi từ levelName thành lessonTitle để đồng bộ dữ liệu
+  lessonTitle: string;
 }
 
 export default function MathQuizPage() {
@@ -25,7 +25,6 @@ export default function MathQuizPage() {
   const [isLevelFinished, setIsLevelFinished] = useState(false);
   const [isAllCompleted, setIsAllCompleted] = useState(false);
 
-  // Sử dụng useRef để lưu trạng thái mới nhất phục vụ cho việc cleanup / beforeunload
   const stateRef = useRef({ score, wrongQuestions, isAllCompleted });
   useEffect(() => {
     stateRef.current = { score, wrongQuestions, isAllCompleted };
@@ -56,7 +55,6 @@ export default function MathQuizPage() {
     }
   }, [currentIndex, currentLevelIndex, isLevelFinished, isAllCompleted]);
 
-  // Hàm lưu kết quả vào localStorage với khóa 'math_quiz_history'
   const saveResultToLocalStorage = (finalScore: number, wrongs: WrongQuestion[]) => {
     try {
       if (finalScore > 0 || wrongs.length > 0) {
@@ -73,7 +71,6 @@ export default function MathQuizPage() {
     }
   };
 
-  // Tự động lưu kết quả nếu bé thoát trang / đóng tab giữa chừng
   useEffect(() => {
     const handleBeforeUnload = () => {
       if (!stateRef.current.isAllCompleted) {
@@ -108,7 +105,7 @@ export default function MathQuizPage() {
         selectedOption: option,
         correctAnswer: currentQ.correctAnswer,
         explanation: currentQ.explanation,
-        lessonTitle: `Quiz: ${currentLevel.levelName}`, // Đồng bộ thuộc tính hiển thị
+        lessonTitle: `Quiz: ${currentLevel.levelName}`,
       };
       setWrongQuestions(prev => [...prev, newWrongItem]);
     }
@@ -155,63 +152,96 @@ export default function MathQuizPage() {
     setIsAllCompleted(false);
   };
 
+  // Tính toán phần trăm tiến độ thanh progress bar
+  const progressPercentage = ((currentIndex + 1) / questions.length) * 100;
+
   return (
-    <main className="min-h-screen w-full bg-gradient-to-b from-pink-100 via-purple-50 to-indigo-100 p-6 flex flex-col items-center justify-between">
-      {/* Header */}
-      <div className="w-full max-w-2xl flex items-center justify-between">
-        <Link 
-          href="/math"
-          onClick={() => saveResultToLocalStorage(score, wrongQuestions)}
-          className="bg-white px-4 py-2 rounded-2xl shadow-sm text-gray-700 font-semibold hover:bg-gray-50 transition"
-        >
-          ⬅️ Quay lại môn Toán
-        </Link>
-        <span className="text-sm font-extrabold text-purple-600 bg-white px-4 py-1.5 rounded-full shadow-sm">
-          ⭐ {currentLevel.levelName}
-        </span>
-        <button
-          onClick={() => speakText(currentQ.title)}
-          className="bg-white p-3 rounded-2xl shadow-sm text-xl hover:bg-purple-50 transition cursor-pointer"
-          title="Nghe đọc lại"
-        >
-          🔊
-        </button>
+    <main className="relative min-h-screen w-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 p-4 sm:p-6 flex flex-col items-center justify-between overflow-hidden selection:bg-yellow-300 selection:text-purple-900">
+      
+      {/* Các hiệu ứng nền trang trí mượt mà */}
+      <div className="absolute top-10 left-10 h-32 w-32 rounded-full bg-white/10 blur-2xl animate-pulse pointer-events-none" />
+      <div className="absolute bottom-10 right-10 h-48 w-48 rounded-full bg-yellow-300/20 blur-3xl animate-pulse pointer-events-none" />
+
+      {/* Header Điều Hướng Chuyên Nghiệp */}
+      <div className="relative z-10 w-full max-w-2xl flex items-center justify-between bg-white/15 backdrop-blur-md px-4 py-3 rounded-2xl border border-white/25 shadow-lg mb-4">
+        <div className="flex items-center gap-2">
+          <Link 
+            href="/home"
+            onClick={() => saveResultToLocalStorage(score, wrongQuestions)}
+            className="bg-white/20 hover:bg-white/30 text-white px-3.5 py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow-sm border border-white/20"
+            title="Về trang chủ hệ thống"
+          >
+            <span>🏠</span> Trang Chủ
+          </Link>
+          <Link 
+            href="/math"
+            onClick={() => saveResultToLocalStorage(score, wrongQuestions)}
+            className="bg-white/20 hover:bg-white/30 text-white px-3.5 py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow-sm border border-white/20"
+          >
+            <span>⬅️</span> Môn Toán
+          </Link>
+        </div>
+
+        <div className="flex items-center gap-2">
+          <span className="text-xs sm:text-sm font-black text-yellow-200 bg-black/20 px-3.5 py-1.5 rounded-xl border border-white/10">
+            ⭐ {currentLevel.levelName}
+          </span>
+          <button
+            onClick={() => speakText(currentQ.title)}
+            className="bg-white/20 hover:bg-white/30 text-white p-2.5 rounded-xl text-base transition cursor-pointer border border-white/20 shadow-sm"
+            title="Nghe đọc lại câu hỏi"
+          >
+            🔊
+          </button>
+        </div>
       </div>
 
-      {/* Nội dung Quiz */}
+      {/* Nội dung chính Quiz */}
       {!isLevelFinished && !isAllCompleted ? (
-        <div className="w-full max-w-xl bg-white rounded-3xl shadow-2xl p-8 border-4 border-purple-200 flex flex-col items-center text-center my-auto transition-all duration-300">
-          <div className="w-full flex justify-between items-center mb-2">
-            <span className="text-sm font-bold uppercase tracking-wider text-pink-500 bg-pink-50 px-4 py-1 rounded-full">
-              Câu hỏi {currentIndex + 1} / {questions.length}
-            </span>
-            <button 
-              onClick={saveResultsOnEarlyFinish}
-              className="text-xs text-gray-500 hover:text-purple-600 underline font-medium cursor-pointer"
-            >
-              Kết thúc sớm & xem kết quả
-            </button>
+        <div className="relative z-10 w-full max-w-xl bg-white/90 backdrop-blur-2xl rounded-[36px] shadow-[0_16px_40px_rgba(0,0,0,0.2)] p-6 sm:p-8 border border-white/50 flex flex-col items-center text-center my-auto transition-all duration-300">
+          
+          {/* Progress bar hiện đại */}
+          <div className="w-full mb-6">
+            <div className="flex justify-between items-center mb-2">
+              <span className="text-xs font-black uppercase tracking-wider text-purple-600 bg-purple-100 px-3 py-1 rounded-full">
+                Câu {currentIndex + 1} / {questions.length}
+              </span>
+              <button 
+                onClick={saveResultsOnEarlyFinish}
+                className="text-xs text-gray-500 hover:text-purple-600 underline font-semibold transition cursor-pointer"
+              >
+                Kết thúc sớm & xem kết quả
+              </button>
+            </div>
+            <div className="w-full h-3 bg-gray-100 rounded-full overflow-hidden p-0.5 shadow-inner">
+              <div 
+                className="h-full bg-gradient-to-r from-pink-500 to-purple-600 rounded-full transition-all duration-500 ease-out"
+                style={{ width: `${progressPercentage}%` }}
+              />
+            </div>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-800 mb-4">
+          <h2 className="text-2xl sm:text-3xl font-black text-gray-800 mb-4 leading-snug">
             {currentQ.title}
           </h2>
 
-          <div className="text-3xl sm:text-5xl font-extrabold mb-6 bg-purple-50 px-6 py-3 rounded-2xl shadow-inner tracking-wider text-purple-700">
+          {/* Equation Box */}
+          <div className="text-3xl sm:text-5xl font-black mb-6 bg-gradient-to-r from-purple-50 to-pink-50 px-8 py-4 rounded-3xl shadow-inner tracking-wider text-purple-700 border border-purple-100">
             {currentQ.equation}
           </div>
 
-          <div className="grid grid-cols-2 gap-4 w-full mb-6">
+          {/* Các nút lựa chọn A, B, C, D */}
+          <div className="grid grid-cols-2 gap-3.5 w-full mb-6">
             {currentQ.options.map((option, index) => {
-              let btnStyle = "bg-purple-50 text-purple-700 border-2 border-purple-200 hover:bg-purple-100";
+              let btnStyle = "bg-white text-purple-700 border-2 border-purple-100 hover:border-purple-300 hover:bg-purple-50/80 shadow-md";
               
               if (selectedOption !== null) {
                 if (option === currentQ.correctAnswer) {
-                  btnStyle = "bg-emerald-500 text-white border-2 border-emerald-600 animate-bounce";
+                  btnStyle = "bg-emerald-500 text-white border-2 border-emerald-600 shadow-lg animate-bounce";
                 } else if (option === selectedOption) {
-                  btnStyle = "bg-rose-500 text-white border-2 border-rose-600";
+                  btnStyle = "bg-rose-500 text-white border-2 border-rose-600 shadow-lg";
                 } else {
-                  btnStyle = "bg-gray-100 text-gray-400 border-2 border-gray-200 opacity-50";
+                  btnStyle = "bg-gray-100 text-gray-400 border-2 border-gray-200 opacity-40 shadow-none";
                 }
               }
 
@@ -220,94 +250,99 @@ export default function MathQuizPage() {
                   key={index}
                   onClick={() => handleAnswerClick(option)}
                   disabled={selectedOption !== null}
-                  className={`py-4 rounded-2xl font-extrabold text-2xl shadow transition cursor-pointer ${btnStyle}`}
+                  className={`py-4 rounded-2xl font-black text-2xl transition-all duration-200 cursor-pointer flex items-center justify-center gap-2 ${btnStyle}`}
                 >
+                  <span className="text-xs opacity-60 bg-black/10 w-6 h-6 rounded-full flex items-center justify-center">
+                    {['A', 'B', 'C', 'D'][index]}
+                  </span>
                   {option}
                 </button>
               );
             })}
           </div>
 
+          {/* Thông báo kết quả đúng/sai từng câu */}
           {selectedOption !== null && (
-            <div className={`w-full p-4 rounded-2xl mb-6 text-center ${isCorrect ? 'bg-emerald-50 text-emerald-800 border border-emerald-200' : 'bg-rose-50 text-rose-800 border border-rose-200'}`}>
-              <p className="font-bold text-lg mb-1">
+            <div className={`w-full p-4 rounded-2xl mb-6 text-center animate-fadeIn ${isCorrect ? 'bg-emerald-50 text-emerald-800 border-2 border-emerald-200' : 'bg-rose-50 text-rose-800 border-2 border-rose-200'}`}>
+              <p className="font-extrabold text-base mb-1">
                 {isCorrect ? '🎉 Chính xác! Bé rất thông minh!' : '❌ Chưa chính xác rồi!'}
               </p>
-              <p className="text-sm font-medium">{currentQ.explanation}</p>
+              <p className="text-xs sm:text-sm font-medium text-gray-600">{currentQ.explanation}</p>
             </div>
           )}
 
+          {/* Nút chuyển câu tiếp theo */}
           {selectedOption !== null && (
             <button
               onClick={handleNextQuestion}
-              className="w-full py-3 rounded-2xl bg-purple-600 hover:bg-purple-700 text-white font-extrabold text-lg shadow-lg transition cursor-pointer"
+              className="w-full py-4 rounded-2xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-black text-lg shadow-xl hover:shadow-2xl transition-all transform hover:scale-[1.02] active:scale-95 cursor-pointer"
             >
               {currentIndex < questions.length - 1 ? 'Câu tiếp theo ➔' : 'Hoàn thành cấp độ 🏆'}
             </button>
           )}
         </div>
       ) : isLevelFinished && !isAllCompleted ? (
-        <div className="w-full max-w-xl bg-white rounded-3xl shadow-2xl p-8 border-4 border-emerald-300 flex flex-col items-center text-center my-auto transition-all duration-300">
-          <div className="text-6xl mb-4">🌟</div>
-          <h2 className="text-3xl font-extrabold text-gray-800 mb-2">
+        <div className="relative z-10 w-full max-w-xl bg-white/95 backdrop-blur-2xl rounded-[36px] shadow-2xl p-8 border-4 border-emerald-300 flex flex-col items-center text-center my-auto transition-all duration-300">
+          <div className="text-7xl mb-4 animate-bounce">🌟🏆🌟</div>
+          <h2 className="text-3xl font-black text-gray-800 mb-2">
             Hoàn thành {currentLevel.levelName}!
           </h2>
-          <p className="text-lg text-gray-600 mb-6">
-            Bé đã sẵn sàng để bước lên cấp độ thử thách tiếp theo chưa nào?
+          <p className="text-sm sm:text-base text-gray-600 mb-8 font-medium">
+            Bé đã hoàn thành xuất sắc thử thách này. Sẵn sàng bước lên cấp độ tiếp theo chưa nào?
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 w-full">
             <button
               onClick={handleNextLevel}
-              className="flex-1 py-4 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-extrabold text-lg shadow-xl hover:from-emerald-600 hover:to-teal-700 transition cursor-pointer"
+              className="flex-1 py-4 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-black text-lg shadow-xl hover:from-emerald-600 hover:to-teal-700 transition transform hover:scale-[1.02] cursor-pointer"
             >
               🚀 Lên cấp độ tiếp theo ➔
             </button>
             <button
               onClick={saveResultsOnEarlyFinish}
-              className="py-3 px-4 rounded-2xl bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold text-sm shadow transition cursor-pointer"
+              className="py-3 px-5 rounded-2xl bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold text-sm shadow transition cursor-pointer"
             >
-              Xem kết quả ngay
+              Xem tổng kết ngay
             </button>
           </div>
         </div>
       ) : (
-        <div className="w-full max-w-2xl bg-white rounded-3xl shadow-2xl p-8 border-4 border-yellow-300 flex flex-col items-center text-center my-auto transition-all duration-300 max-h-[85vh] overflow-y-auto">
-          <div className="text-5xl mb-2">👑</div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-800 mb-1">
-            Tổng kết kết quả của bé
+        <div className="relative z-10 w-full max-w-2xl bg-white/95 backdrop-blur-2xl rounded-[36px] shadow-2xl p-6 sm:p-8 border-4 border-yellow-300 flex flex-col items-center text-center my-auto transition-all duration-300 max-h-[85vh] overflow-y-auto">
+          <div className="text-6xl mb-2 animate-bounce">👑🎉👑</div>
+          <h2 className="text-2xl sm:text-3xl font-black text-gray-800 mb-1">
+            Tổng Kết Kết Quả Của Bé
           </h2>
-          <p className="text-md text-gray-600 mb-4">
-            Tổng điểm tích lũy: <span className="text-purple-600 font-extrabold text-xl">{score} điểm</span>
+          <p className="text-sm text-gray-600 mb-6 font-medium">
+            Tổng điểm tích lũy: <span className="text-purple-600 font-black text-2xl">⭐ {score} điểm</span>
           </p>
 
           <div className="w-full text-left mb-6">
-            <h3 className="font-bold text-gray-700 text-base mb-2 border-b pb-1 flex items-center justify-between">
-              <span>📋 Nhật ký câu trả lời sai:</span>
-              <span className="text-xs text-rose-500 bg-rose-50 px-2 py-0.5 rounded-full">
-                {wrongQuestions.length} câu cần ôn lại
+            <h3 className="font-bold text-gray-700 text-sm mb-3 border-b pb-1.5 flex items-center justify-between">
+              <span>📋 Nhật ký câu trả lời cần ôn lại:</span>
+              <span className="text-xs text-rose-500 bg-rose-50 px-2.5 py-1 rounded-full font-bold">
+                {wrongQuestions.length} câu
               </span>
             </h3>
 
             {wrongQuestions.length === 0 ? (
-              <div className="bg-emerald-50 border border-emerald-200 text-emerald-800 p-4 rounded-2xl text-center text-sm font-medium">
-                🎉 Tuyệt vời! Bé không trả lời sai câu nào trong phiên chơi này!
+              <div className="bg-emerald-50 border-2 border-emerald-200 text-emerald-800 p-5 rounded-2xl text-center text-sm font-bold shadow-inner">
+                🎉 Tuyệt vời! Bé không trả lời sai câu nào trong toàn bộ phiên chơi này!
               </div>
             ) : (
-              <div className="space-y-3 max-h-60 overflow-y-auto pr-2">
+              <div className="space-y-3 max-h-56 overflow-y-auto pr-2">
                 {wrongQuestions.map((item, idx) => (
-                  <div key={idx} className="bg-rose-50/60 border border-rose-200 p-3 rounded-2xl text-sm">
+                  <div key={idx} className="bg-rose-50/80 border border-rose-200 p-3.5 rounded-2xl text-sm shadow-sm">
                     <p className="text-xs font-bold text-purple-600 mb-0.5">{item.lessonTitle}</p>
-                    <p className="font-extrabold text-gray-800">{item.title} ({item.equation})</p>
-                    <div className="mt-1 flex flex-wrap gap-2 text-xs">
-                      <span className="bg-rose-100 text-rose-700 px-2 py-0.5 rounded-md font-medium">
+                    <p className="font-black text-gray-800 text-base">{item.title} ({item.equation})</p>
+                    <div className="mt-2 flex flex-wrap gap-2 text-xs">
+                      <span className="bg-rose-100 text-rose-700 px-2.5 py-1 rounded-lg font-bold">
                         Bé chọn: <strong>{item.selectedOption}</strong>
                       </span>
-                      <span className="bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-md font-medium">
+                      <span className="bg-emerald-100 text-emerald-700 px-2.5 py-1 rounded-lg font-bold">
                         Đáp án đúng: <strong>{item.correctAnswer}</strong>
                       </span>
                     </div>
-                    <p className="text-xs text-gray-600 mt-1 italic">💡 {item.explanation}</p>
+                    <p className="text-xs text-gray-600 mt-1.5 italic">💡 {item.explanation}</p>
                   </div>
                 ))}
               </div>
@@ -317,22 +352,23 @@ export default function MathQuizPage() {
           <div className="flex flex-col sm:flex-row gap-3 w-full">
             <button
               onClick={restartAll}
-              className="flex-1 py-3 rounded-2xl bg-purple-100 hover:bg-purple-200 text-purple-800 font-bold text-lg shadow transition cursor-pointer"
+              className="flex-1 py-3.5 rounded-2xl bg-purple-100 hover:bg-purple-200 text-purple-800 font-bold text-base shadow transition cursor-pointer"
             >
               🔄 Chơi lại từ đầu
             </button>
             <Link
-              href="/math"
-              className="flex-1 py-3 rounded-2xl bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-extrabold text-lg text-center shadow-lg hover:from-purple-700 hover:to-indigo-700 transition block"
+              href="/home"
+              className="flex-1 py-3.5 rounded-2xl bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-black text-base text-center shadow-lg hover:from-purple-700 hover:to-indigo-700 transition block"
             >
-              🏠 Về trang chủ Toán
+              🏠 Về Trang Chủ
             </Link>
           </div>
         </div>
       )}
 
-      <div className="text-gray-500 text-sm mt-4">
-        Trò chơi trắc nghiệm edubee 🌟
+      {/* Footer nhỏ */}
+      <div className="relative z-10 text-white/80 text-xs mt-4 font-semibold tracking-wider uppercase">
+        Trò chơi trắc nghiệm thông minh edubee 🌟
       </div>
     </main>
   );
